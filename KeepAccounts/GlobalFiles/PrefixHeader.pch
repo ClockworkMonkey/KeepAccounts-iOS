@@ -1,0 +1,48 @@
+//
+//  PrefixHeader.pch
+//  KeepAccounts
+//
+//  Created by 王瑞果 on 2018/7/18.
+//  Copyright © 2018年 王瑞果. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UILabel+Generic.h"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+//define this constant if you want to use Masonry without the 'mas_' prefix
+#define MAS_SHORTHAND
+//define this constant if you want to enable auto-boxing for default syntax
+#define MAS_SHORTHAND_GLOBALS
+#import <Masonry/Masonry.h>
+
+/** 颜色 */
+#define RANDOM_256 arc4random_uniform(256)
+#define COLOR_RGBA(r, g, b, a) [UIColor colorWithRed:(r / 255.f) green:(g / 255.f) blue:(b / 255.f) alpha:a]
+#define COLOR_RGB(r, g, b) COLOR_RGBA(r, g, b, 1.0)
+#define COLOR_RANDOM COLOR_RGB(RANDOM_256, RANDOM_256, RANDOM_256)
+// UI 颜色
+#define COLOR_UI_WHITE COLOR_RGB(255, 255, 255)
+#define COLOR_UI_RED COLOR_RGB(250, 85, 100)
+#define COLOR_UI_GRAY COLOR_RGB(242, 242, 242)
+// background 颜色
+#define COLOR_BG_GRAY COLOR_RGB(242, 242, 242)
+#define COLOR_BG_WHITE COLOR_RGB(255, 255, 255)
+// TEXT 颜色
+#define COLOR_TEXT_DEFAULT COLOR_RGB(43, 48, 64)
+#define COLOR_TEXT_WHITE COLOR_RGB(255, 255, 255)
+#define COLOR_TEXT_GRAY COLOR_RGB(180, 180, 180)
+#define COLOR_TEXT_BLACK COLOR_RGB(60, 60, 60)
+#define COLOR_TEXT_GRAY_MSVC COLOR_RGB(140, 143, 152)
+// CATEGORY 颜色
+#define COLOR_CATEGORY_GREEN COLOR_RGB(55, 215, 160)
+#define COLOR_CATEGORY_BLUE COLOR_RGB(120, 170, 250)
+#define COLOR_CATEGORY_YELLOW COLOR_RGB(250, 200, 60)
+
+#define kMargin 10.f
+
+#endif /* PrefixHeader_pch */

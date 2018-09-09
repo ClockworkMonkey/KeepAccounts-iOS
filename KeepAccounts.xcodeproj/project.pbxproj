@@ -1,0 +1,923 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A8E65EE1065B6AC0EADD05C9 /* Pods_KeepAccounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3A6168587CCC1D0F057671 /* Pods_KeepAccounts.framework */; };
+		FF0011282113D71000DFCEC2 /* WRGHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0011272113D71000DFCEC2 /* WRGHomePageViewController.m */; };
+		FF00112B2113D94900DFCEC2 /* WRGBillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF00112A2113D94900DFCEC2 /* WRGBillViewController.m */; };
+		FF504A762136926400CCF0BA /* WRGSubcategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF504A752136926400CCF0BA /* WRGSubcategoryView.m */; };
+		FF504A79213696DB00CCF0BA /* WRGSubcategoryFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FF504A78213696DB00CCF0BA /* WRGSubcategoryFlowLayout.m */; };
+		FF504A7C2136972E00CCF0BA /* WRGSubcategoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF504A7B2136972E00CCF0BA /* WRGSubcategoryViewCell.m */; };
+		FF504A7F2136991F00CCF0BA /* WRGManageSubcategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF504A7E2136991F00CCF0BA /* WRGManageSubcategoryViewController.m */; };
+		FF504A82213699C700CCF0BA /* WRGManageCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF504A81213699C700CCF0BA /* WRGManageCategoryViewController.m */; };
+		FF50701E2106A8DC00FC5A46 /* WRGFirstLevelSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF50701D2106A8DC00FC5A46 /* WRGFirstLevelSettingView.m */; };
+		FF5070242106D54C00FC5A46 /* WRGFirstLevelSettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5070232106D54C00FC5A46 /* WRGFirstLevelSettingModel.m */; };
+		FF5070272107007500FC5A46 /* WRGFirstLevelSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5070262107007500FC5A46 /* WRGFirstLevelSettingCell.m */; };
+		FF50702D2107129E00FC5A46 /* UIImage+CustomImage.m in Sources */ = {isa = PBXBuildFile; fileRef = FF50702C2107129E00FC5A46 /* UIImage+CustomImage.m */; };
+		FF5070302107262C00FC5A46 /* WRGLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF50702F2107262C00FC5A46 /* WRGLoginViewController.m */; };
+		FF5070332107274900FC5A46 /* WRGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5070322107274900FC5A46 /* WRGUser.m */; };
+		FF74BA1220FF386100542570 /* WRGOverviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF74BA1120FF386100542570 /* WRGOverviewView.m */; };
+		FF74E351213A90790040394C /* WRGCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF74E350213A90790040394C /* WRGCategoryView.m */; };
+		FF74E354213A93020040394C /* WRGCategoryHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF74E353213A93020040394C /* WRGCategoryHeaderView.m */; };
+		FF74E359213AC0720040394C /* WRGCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF74E358213AC0720040394C /* WRGCategoryCell.m */; };
+		FF938297210DB7E600977C03 /* WRGSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF938296210DB7E600977C03 /* WRGSettingViewController.m */; };
+		FF93829A210DBC8A00977C03 /* WRGMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF938299210DBC8A00977C03 /* WRGMeViewController.m */; };
+		FFAD53E4210DF53100DF3194 /* SettingsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFAD53E3210DF53100DF3194 /* SettingsList.plist */; };
+		FFBB65252105C44600065CD1 /* WRGRecentBillView.m in Sources */ = {isa = PBXBuildFile; fileRef = FFBB65242105C44600065CD1 /* WRGRecentBillView.m */; };
+		FFBB65282105CFE200065CD1 /* WRGUserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = FFBB65272105CFE200065CD1 /* WRGUserInfoView.m */; };
+		FFDB91C520FF1728004FE9E4 /* WRGAppDeleage.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB91C420FF1728004FE9E4 /* WRGAppDeleage.m */; };
+		FFDB91C820FF1A77004FE9E4 /* WRGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB91C720FF1A77004FE9E4 /* WRGNavigationController.m */; };
+		FFDB91CE20FF1B82004FE9E4 /* WRGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB91CC20FF1B82004FE9E4 /* WRGTabBarController.m */; };
+		FFDB91E820FF2529004FE9E4 /* WRGRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB91E720FF2529004FE9E4 /* WRGRecordViewController.m */; };
+		FFDB91EB20FF253F004FE9E4 /* WRGShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB91EA20FF253F004FE9E4 /* WRGShowViewController.m */; };
+		FFEA11232144AF7B001E2B40 /* WRGCategoryFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FFEA11222144AF7B001E2B40 /* WRGCategoryFlowLayout.m */; };
+		FFF7878F20FDDE0300771C71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFF7878E20FDDE0300771C71 /* Assets.xcassets */; };
+		FFF7879520FDDE0300771C71 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF7879420FDDE0300771C71 /* main.m */; };
+		FFF7879F20FDDE0300771C71 /* KeepAccountsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF7879E20FDDE0300771C71 /* KeepAccountsTests.m */; };
+		FFF787AA20FDDE0300771C71 /* KeepAccountsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF787A920FDDE0300771C71 /* KeepAccountsUITests.m */; };
+		FFFD0A27210535EA00871F4D /* UILabel+Generic.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFD0A26210535EA00871F4D /* UILabel+Generic.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FFF7879B20FDDE0300771C71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFF7877A20FDDE0100771C71 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFF7878120FDDE0100771C71;
+			remoteInfo = KeepAccounts;
+		};
+		FFF787A620FDDE0300771C71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFF7877A20FDDE0100771C71 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFF7878120FDDE0100771C71;
+			remoteInfo = KeepAccounts;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A073CB31BCA778D0A5AF3F9 /* Pods-KeepAccounts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepAccounts.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeepAccounts/Pods-KeepAccounts.release.xcconfig"; sourceTree = "<group>"; };
+		1E3A6168587CCC1D0F057671 /* Pods_KeepAccounts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeepAccounts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCC9BD87DE6C8F8B5053915C /* Pods-KeepAccounts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepAccounts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeepAccounts/Pods-KeepAccounts.debug.xcconfig"; sourceTree = "<group>"; };
+		FF0011262113D71000DFCEC2 /* WRGHomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGHomePageViewController.h; sourceTree = "<group>"; };
+		FF0011272113D71000DFCEC2 /* WRGHomePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGHomePageViewController.m; sourceTree = "<group>"; };
+		FF0011292113D94900DFCEC2 /* WRGBillViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGBillViewController.h; sourceTree = "<group>"; };
+		FF00112A2113D94900DFCEC2 /* WRGBillViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGBillViewController.m; sourceTree = "<group>"; };
+		FF162FBA211877BE00275208 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF504A742136926400CCF0BA /* WRGSubcategoryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGSubcategoryView.h; sourceTree = "<group>"; };
+		FF504A752136926400CCF0BA /* WRGSubcategoryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGSubcategoryView.m; sourceTree = "<group>"; };
+		FF504A77213696DB00CCF0BA /* WRGSubcategoryFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGSubcategoryFlowLayout.h; sourceTree = "<group>"; };
+		FF504A78213696DB00CCF0BA /* WRGSubcategoryFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGSubcategoryFlowLayout.m; sourceTree = "<group>"; };
+		FF504A7A2136972E00CCF0BA /* WRGSubcategoryViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGSubcategoryViewCell.h; sourceTree = "<group>"; };
+		FF504A7B2136972E00CCF0BA /* WRGSubcategoryViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGSubcategoryViewCell.m; sourceTree = "<group>"; };
+		FF504A7D2136991F00CCF0BA /* WRGManageSubcategoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGManageSubcategoryViewController.h; sourceTree = "<group>"; };
+		FF504A7E2136991F00CCF0BA /* WRGManageSubcategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGManageSubcategoryViewController.m; sourceTree = "<group>"; };
+		FF504A80213699C700CCF0BA /* WRGManageCategoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGManageCategoryViewController.h; sourceTree = "<group>"; };
+		FF504A81213699C700CCF0BA /* WRGManageCategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGManageCategoryViewController.m; sourceTree = "<group>"; };
+		FF50701C2106A8DC00FC5A46 /* WRGFirstLevelSettingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGFirstLevelSettingView.h; sourceTree = "<group>"; };
+		FF50701D2106A8DC00FC5A46 /* WRGFirstLevelSettingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGFirstLevelSettingView.m; sourceTree = "<group>"; };
+		FF5070222106D54C00FC5A46 /* WRGFirstLevelSettingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGFirstLevelSettingModel.h; sourceTree = "<group>"; };
+		FF5070232106D54C00FC5A46 /* WRGFirstLevelSettingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGFirstLevelSettingModel.m; sourceTree = "<group>"; };
+		FF5070252107007500FC5A46 /* WRGFirstLevelSettingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGFirstLevelSettingCell.h; sourceTree = "<group>"; };
+		FF5070262107007500FC5A46 /* WRGFirstLevelSettingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGFirstLevelSettingCell.m; sourceTree = "<group>"; };
+		FF50702B2107129E00FC5A46 /* UIImage+CustomImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+CustomImage.h"; sourceTree = "<group>"; };
+		FF50702C2107129E00FC5A46 /* UIImage+CustomImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CustomImage.m"; sourceTree = "<group>"; };
+		FF50702E2107262C00FC5A46 /* WRGLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGLoginViewController.h; sourceTree = "<group>"; };
+		FF50702F2107262C00FC5A46 /* WRGLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGLoginViewController.m; sourceTree = "<group>"; };
+		FF5070312107274900FC5A46 /* WRGUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGUser.h; sourceTree = "<group>"; };
+		FF5070322107274900FC5A46 /* WRGUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGUser.m; sourceTree = "<group>"; };
+		FF74BA1020FF386100542570 /* WRGOverviewView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGOverviewView.h; sourceTree = "<group>"; };
+		FF74BA1120FF386100542570 /* WRGOverviewView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGOverviewView.m; sourceTree = "<group>"; };
+		FF74E34F213A90790040394C /* WRGCategoryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGCategoryView.h; sourceTree = "<group>"; };
+		FF74E350213A90790040394C /* WRGCategoryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGCategoryView.m; sourceTree = "<group>"; };
+		FF74E352213A93020040394C /* WRGCategoryHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGCategoryHeaderView.h; sourceTree = "<group>"; };
+		FF74E353213A93020040394C /* WRGCategoryHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGCategoryHeaderView.m; sourceTree = "<group>"; };
+		FF74E357213AC0720040394C /* WRGCategoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGCategoryCell.h; sourceTree = "<group>"; };
+		FF74E358213AC0720040394C /* WRGCategoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGCategoryCell.m; sourceTree = "<group>"; };
+		FF938295210DB7E600977C03 /* WRGSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGSettingViewController.h; sourceTree = "<group>"; };
+		FF938296210DB7E600977C03 /* WRGSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGSettingViewController.m; sourceTree = "<group>"; };
+		FF938298210DBC8A00977C03 /* WRGMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGMeViewController.h; sourceTree = "<group>"; };
+		FF938299210DBC8A00977C03 /* WRGMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGMeViewController.m; sourceTree = "<group>"; };
+		FFAD53E3210DF53100DF3194 /* SettingsList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SettingsList.plist; sourceTree = "<group>"; };
+		FFBB65232105C44600065CD1 /* WRGRecentBillView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGRecentBillView.h; sourceTree = "<group>"; };
+		FFBB65242105C44600065CD1 /* WRGRecentBillView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGRecentBillView.m; sourceTree = "<group>"; };
+		FFBB65262105CFE200065CD1 /* WRGUserInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGUserInfoView.h; sourceTree = "<group>"; };
+		FFBB65272105CFE200065CD1 /* WRGUserInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGUserInfoView.m; sourceTree = "<group>"; };
+		FFDB91C320FF1728004FE9E4 /* WRGAppDeleage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGAppDeleage.h; sourceTree = "<group>"; };
+		FFDB91C420FF1728004FE9E4 /* WRGAppDeleage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGAppDeleage.m; sourceTree = "<group>"; };
+		FFDB91C620FF1A77004FE9E4 /* WRGNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGNavigationController.h; sourceTree = "<group>"; };
+		FFDB91C720FF1A77004FE9E4 /* WRGNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGNavigationController.m; sourceTree = "<group>"; };
+		FFDB91CC20FF1B82004FE9E4 /* WRGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRGTabBarController.m; sourceTree = "<group>"; };
+		FFDB91CD20FF1B82004FE9E4 /* WRGTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRGTabBarController.h; sourceTree = "<group>"; };
+		FFDB91CF20FF1C61004FE9E4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		FFDB91E620FF2529004FE9E4 /* WRGRecordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGRecordViewController.h; sourceTree = "<group>"; };
+		FFDB91E720FF2529004FE9E4 /* WRGRecordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGRecordViewController.m; sourceTree = "<group>"; };
+		FFDB91E920FF253F004FE9E4 /* WRGShowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGShowViewController.h; sourceTree = "<group>"; };
+		FFDB91EA20FF253F004FE9E4 /* WRGShowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGShowViewController.m; sourceTree = "<group>"; };
+		FFEA11212144AF7B001E2B40 /* WRGCategoryFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGCategoryFlowLayout.h; sourceTree = "<group>"; };
+		FFEA11222144AF7B001E2B40 /* WRGCategoryFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGCategoryFlowLayout.m; sourceTree = "<group>"; };
+		FFF7878220FDDE0100771C71 /* KeepAccounts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepAccounts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFF7878E20FDDE0300771C71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FFF7879320FDDE0300771C71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFF7879420FDDE0300771C71 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FFF7879A20FDDE0300771C71 /* KeepAccountsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeepAccountsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFF7879E20FDDE0300771C71 /* KeepAccountsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeepAccountsTests.m; sourceTree = "<group>"; };
+		FFF787A020FDDE0300771C71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFF787A520FDDE0300771C71 /* KeepAccountsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeepAccountsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFF787A920FDDE0300771C71 /* KeepAccountsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeepAccountsUITests.m; sourceTree = "<group>"; };
+		FFF787AB20FDDE0300771C71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFFD0A25210535EA00871F4D /* UILabel+Generic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Generic.h"; sourceTree = "<group>"; };
+		FFFD0A26210535EA00871F4D /* UILabel+Generic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Generic.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FFF7877F20FDDE0100771C71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8E65EE1065B6AC0EADD05C9 /* Pods_KeepAccounts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFF7879720FDDE0300771C71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFF787A220FDDE0300771C71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A19BADE45E8036779D7D437 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCC9BD87DE6C8F8B5053915C /* Pods-KeepAccounts.debug.xcconfig */,
+				0A073CB31BCA778D0A5AF3F9 /* Pods-KeepAccounts.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		499432993C289B1B62647509 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF162FBA211877BE00275208 /* Masonry.framework */,
+				1E3A6168587CCC1D0F057671 /* Pods_KeepAccounts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF2862762134F3B300794C3D /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				FFEA11212144AF7B001E2B40 /* WRGCategoryFlowLayout.h */,
+				FFEA11222144AF7B001E2B40 /* WRGCategoryFlowLayout.m */,
+				FF504A77213696DB00CCF0BA /* WRGSubcategoryFlowLayout.h */,
+				FF504A78213696DB00CCF0BA /* WRGSubcategoryFlowLayout.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		FF2948632139426900C6DFAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FF2948642139426F00C6DFAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF74E355213ABFD60040394C /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				FF74E34F213A90790040394C /* WRGCategoryView.h */,
+				FF74E350213A90790040394C /* WRGCategoryView.m */,
+				FF74E352213A93020040394C /* WRGCategoryHeaderView.h */,
+				FF74E353213A93020040394C /* WRGCategoryHeaderView.m */,
+				FF74E357213AC0720040394C /* WRGCategoryCell.h */,
+				FF74E358213AC0720040394C /* WRGCategoryCell.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		FF74E356213ABFE20040394C /* Subcategory */ = {
+			isa = PBXGroup;
+			children = (
+				FF504A742136926400CCF0BA /* WRGSubcategoryView.h */,
+				FF504A752136926400CCF0BA /* WRGSubcategoryView.m */,
+				FF504A7A2136972E00CCF0BA /* WRGSubcategoryViewCell.h */,
+				FF504A7B2136972E00CCF0BA /* WRGSubcategoryViewCell.m */,
+			);
+			path = Subcategory;
+			sourceTree = "<group>";
+		};
+		FF83C8FB2145563D00338A43 /* Mode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mode;
+			sourceTree = "<group>";
+		};
+		FFDB91D020FF1CA2004FE9E4 /* GlobalFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FFF7879420FDDE0300771C71 /* main.m */,
+				FFDB91CF20FF1C61004FE9E4 /* PrefixHeader.pch */,
+				FFDB91C320FF1728004FE9E4 /* WRGAppDeleage.h */,
+				FFDB91C420FF1728004FE9E4 /* WRGAppDeleage.m */,
+				FFDB91CD20FF1B82004FE9E4 /* WRGTabBarController.h */,
+				FFDB91CC20FF1B82004FE9E4 /* WRGTabBarController.m */,
+				FFDB91C620FF1A77004FE9E4 /* WRGNavigationController.h */,
+				FFDB91C720FF1A77004FE9E4 /* WRGNavigationController.m */,
+				FFFD0A25210535EA00871F4D /* UILabel+Generic.h */,
+				FFFD0A26210535EA00871F4D /* UILabel+Generic.m */,
+				FF50702B2107129E00FC5A46 /* UIImage+CustomImage.h */,
+				FF50702C2107129E00FC5A46 /* UIImage+CustomImage.m */,
+				FF5070312107274900FC5A46 /* WRGUser.h */,
+				FF5070322107274900FC5A46 /* WRGUser.m */,
+				FFAD53E3210DF53100DF3194 /* SettingsList.plist */,
+			);
+			path = GlobalFiles;
+			sourceTree = "<group>";
+		};
+		FFDB91D120FF2207004FE9E4 /* Record Module */ = {
+			isa = PBXGroup;
+			children = (
+				FF83C8FB2145563D00338A43 /* Mode */,
+				FFDB91DF20FF24C7004FE9E4 /* View */,
+				FFDB91DE20FF24C7004FE9E4 /* Controller */,
+			);
+			path = "Record Module";
+			sourceTree = "<group>";
+		};
+		FFDB91D220FF232A004FE9E4 /* Settings Module */ = {
+			isa = PBXGroup;
+			children = (
+				FFDB91E220FF24D7004FE9E4 /* Model */,
+				FFDB91E120FF24D7004FE9E4 /* View */,
+				FFDB91E020FF24D7004FE9E4 /* Controller */,
+				FF2862762134F3B300794C3D /* Other */,
+			);
+			path = "Settings Module";
+			sourceTree = "<group>";
+		};
+		FFDB91D320FF2404004FE9E4 /* Show Module */ = {
+			isa = PBXGroup;
+			children = (
+				FF2948632139426900C6DFAF /* Model */,
+				FF2948642139426F00C6DFAF /* View */,
+				FFDB91E320FF24E3004FE9E4 /* Controller */,
+			);
+			path = "Show Module";
+			sourceTree = "<group>";
+		};
+		FFDB91DE20FF24C7004FE9E4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FF0011262113D71000DFCEC2 /* WRGHomePageViewController.h */,
+				FF0011272113D71000DFCEC2 /* WRGHomePageViewController.m */,
+				FFDB91E620FF2529004FE9E4 /* WRGRecordViewController.h */,
+				FFDB91E720FF2529004FE9E4 /* WRGRecordViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FFDB91DF20FF24C7004FE9E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF74BA1020FF386100542570 /* WRGOverviewView.h */,
+				FF74BA1120FF386100542570 /* WRGOverviewView.m */,
+				FFBB65232105C44600065CD1 /* WRGRecentBillView.h */,
+				FFBB65242105C44600065CD1 /* WRGRecentBillView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FFDB91E020FF24D7004FE9E4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FF938298210DBC8A00977C03 /* WRGMeViewController.h */,
+				FF938299210DBC8A00977C03 /* WRGMeViewController.m */,
+				FF50702E2107262C00FC5A46 /* WRGLoginViewController.h */,
+				FF50702F2107262C00FC5A46 /* WRGLoginViewController.m */,
+				FF938295210DB7E600977C03 /* WRGSettingViewController.h */,
+				FF938296210DB7E600977C03 /* WRGSettingViewController.m */,
+				FF504A80213699C700CCF0BA /* WRGManageCategoryViewController.h */,
+				FF504A81213699C700CCF0BA /* WRGManageCategoryViewController.m */,
+				FF504A7D2136991F00CCF0BA /* WRGManageSubcategoryViewController.h */,
+				FF504A7E2136991F00CCF0BA /* WRGManageSubcategoryViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FFDB91E120FF24D7004FE9E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF74E355213ABFD60040394C /* Category */,
+				FF74E356213ABFE20040394C /* Subcategory */,
+				FFBB65262105CFE200065CD1 /* WRGUserInfoView.h */,
+				FFBB65272105CFE200065CD1 /* WRGUserInfoView.m */,
+				FF50701C2106A8DC00FC5A46 /* WRGFirstLevelSettingView.h */,
+				FF50701D2106A8DC00FC5A46 /* WRGFirstLevelSettingView.m */,
+				FF5070252107007500FC5A46 /* WRGFirstLevelSettingCell.h */,
+				FF5070262107007500FC5A46 /* WRGFirstLevelSettingCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FFDB91E220FF24D7004FE9E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FF5070222106D54C00FC5A46 /* WRGFirstLevelSettingModel.h */,
+				FF5070232106D54C00FC5A46 /* WRGFirstLevelSettingModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FFDB91E320FF24E3004FE9E4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FFDB91E920FF253F004FE9E4 /* WRGShowViewController.h */,
+				FFDB91EA20FF253F004FE9E4 /* WRGShowViewController.m */,
+				FF0011292113D94900DFCEC2 /* WRGBillViewController.h */,
+				FF00112A2113D94900DFCEC2 /* WRGBillViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FFF7877920FDDE0100771C71 = {
+			isa = PBXGroup;
+			children = (
+				FFF7878420FDDE0100771C71 /* KeepAccounts */,
+				FFF7879D20FDDE0300771C71 /* KeepAccountsTests */,
+				FFF787A820FDDE0300771C71 /* KeepAccountsUITests */,
+				FFF7878320FDDE0100771C71 /* Products */,
+				3A19BADE45E8036779D7D437 /* Pods */,
+				499432993C289B1B62647509 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FFF7878320FDDE0100771C71 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FFF7878220FDDE0100771C71 /* KeepAccounts.app */,
+				FFF7879A20FDDE0300771C71 /* KeepAccountsTests.xctest */,
+				FFF787A520FDDE0300771C71 /* KeepAccountsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FFF7878420FDDE0100771C71 /* KeepAccounts */ = {
+			isa = PBXGroup;
+			children = (
+				FFDB91D120FF2207004FE9E4 /* Record Module */,
+				FFDB91D320FF2404004FE9E4 /* Show Module */,
+				FFDB91D220FF232A004FE9E4 /* Settings Module */,
+				FFDB91D020FF1CA2004FE9E4 /* GlobalFiles */,
+				FFF7878E20FDDE0300771C71 /* Assets.xcassets */,
+				FFF7879320FDDE0300771C71 /* Info.plist */,
+			);
+			path = KeepAccounts;
+			sourceTree = "<group>";
+		};
+		FFF7879D20FDDE0300771C71 /* KeepAccountsTests */ = {
+			isa = PBXGroup;
+			children = (
+				FFF7879E20FDDE0300771C71 /* KeepAccountsTests.m */,
+				FFF787A020FDDE0300771C71 /* Info.plist */,
+			);
+			path = KeepAccountsTests;
+			sourceTree = "<group>";
+		};
+		FFF787A820FDDE0300771C71 /* KeepAccountsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FFF787A920FDDE0300771C71 /* KeepAccountsUITests.m */,
+				FFF787AB20FDDE0300771C71 /* Info.plist */,
+			);
+			path = KeepAccountsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FFF7878120FDDE0100771C71 /* KeepAccounts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFF787AE20FDDE0300771C71 /* Build configuration list for PBXNativeTarget "KeepAccounts" */;
+			buildPhases = (
+				7B4E6B0EB67C7CC21967EB4B /* [CP] Check Pods Manifest.lock */,
+				FFF7877E20FDDE0100771C71 /* Sources */,
+				FFF7877F20FDDE0100771C71 /* Frameworks */,
+				FFF7878020FDDE0100771C71 /* Resources */,
+				3206EC9EEFACA646DBCEA004 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeepAccounts;
+			productName = KeepAccounts;
+			productReference = FFF7878220FDDE0100771C71 /* KeepAccounts.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FFF7879920FDDE0300771C71 /* KeepAccountsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFF787B120FDDE0300771C71 /* Build configuration list for PBXNativeTarget "KeepAccountsTests" */;
+			buildPhases = (
+				FFF7879620FDDE0300771C71 /* Sources */,
+				FFF7879720FDDE0300771C71 /* Frameworks */,
+				FFF7879820FDDE0300771C71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FFF7879C20FDDE0300771C71 /* PBXTargetDependency */,
+			);
+			name = KeepAccountsTests;
+			productName = KeepAccountsTests;
+			productReference = FFF7879A20FDDE0300771C71 /* KeepAccountsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FFF787A420FDDE0300771C71 /* KeepAccountsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFF787B420FDDE0300771C71 /* Build configuration list for PBXNativeTarget "KeepAccountsUITests" */;
+			buildPhases = (
+				FFF787A120FDDE0300771C71 /* Sources */,
+				FFF787A220FDDE0300771C71 /* Frameworks */,
+				FFF787A320FDDE0300771C71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FFF787A720FDDE0300771C71 /* PBXTargetDependency */,
+			);
+			name = KeepAccountsUITests;
+			productName = KeepAccountsUITests;
+			productReference = FFF787A520FDDE0300771C71 /* KeepAccountsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FFF7877A20FDDE0100771C71 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WRG;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "王瑞果";
+				TargetAttributes = {
+					FFF7878120FDDE0100771C71 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					FFF7879920FDDE0300771C71 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = FFF7878120FDDE0100771C71;
+					};
+					FFF787A420FDDE0300771C71 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = FFF7878120FDDE0100771C71;
+					};
+				};
+			};
+			buildConfigurationList = FFF7877D20FDDE0100771C71 /* Build configuration list for PBXProject "KeepAccounts" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FFF7877920FDDE0100771C71;
+			productRefGroup = FFF7878320FDDE0100771C71 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FFF7878120FDDE0100771C71 /* KeepAccounts */,
+				FFF7879920FDDE0300771C71 /* KeepAccountsTests */,
+				FFF787A420FDDE0300771C71 /* KeepAccountsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FFF7878020FDDE0100771C71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFF7878F20FDDE0300771C71 /* Assets.xcassets in Resources */,
+				FFAD53E4210DF53100DF3194 /* SettingsList.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFF7879820FDDE0300771C71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFF787A320FDDE0300771C71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3206EC9EEFACA646DBCEA004 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-KeepAccounts/Pods-KeepAccounts-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KeepAccounts/Pods-KeepAccounts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B4E6B0EB67C7CC21967EB4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KeepAccounts-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FFF7877E20FDDE0100771C71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF504A82213699C700CCF0BA /* WRGManageCategoryViewController.m in Sources */,
+				FF504A7F2136991F00CCF0BA /* WRGManageSubcategoryViewController.m in Sources */,
+				FFBB65282105CFE200065CD1 /* WRGUserInfoView.m in Sources */,
+				FF5070272107007500FC5A46 /* WRGFirstLevelSettingCell.m in Sources */,
+				FFDB91EB20FF253F004FE9E4 /* WRGShowViewController.m in Sources */,
+				FF504A79213696DB00CCF0BA /* WRGSubcategoryFlowLayout.m in Sources */,
+				FFDB91C820FF1A77004FE9E4 /* WRGNavigationController.m in Sources */,
+				FFF7879520FDDE0300771C71 /* main.m in Sources */,
+				FFDB91C520FF1728004FE9E4 /* WRGAppDeleage.m in Sources */,
+				FF504A7C2136972E00CCF0BA /* WRGSubcategoryViewCell.m in Sources */,
+				FF74E354213A93020040394C /* WRGCategoryHeaderView.m in Sources */,
+				FFBB65252105C44600065CD1 /* WRGRecentBillView.m in Sources */,
+				FF0011282113D71000DFCEC2 /* WRGHomePageViewController.m in Sources */,
+				FF50701E2106A8DC00FC5A46 /* WRGFirstLevelSettingView.m in Sources */,
+				FF50702D2107129E00FC5A46 /* UIImage+CustomImage.m in Sources */,
+				FF938297210DB7E600977C03 /* WRGSettingViewController.m in Sources */,
+				FF5070332107274900FC5A46 /* WRGUser.m in Sources */,
+				FFFD0A27210535EA00871F4D /* UILabel+Generic.m in Sources */,
+				FFEA11232144AF7B001E2B40 /* WRGCategoryFlowLayout.m in Sources */,
+				FF00112B2113D94900DFCEC2 /* WRGBillViewController.m in Sources */,
+				FF93829A210DBC8A00977C03 /* WRGMeViewController.m in Sources */,
+				FF74E351213A90790040394C /* WRGCategoryView.m in Sources */,
+				FF5070302107262C00FC5A46 /* WRGLoginViewController.m in Sources */,
+				FF74E359213AC0720040394C /* WRGCategoryCell.m in Sources */,
+				FF5070242106D54C00FC5A46 /* WRGFirstLevelSettingModel.m in Sources */,
+				FF504A762136926400CCF0BA /* WRGSubcategoryView.m in Sources */,
+				FFDB91E820FF2529004FE9E4 /* WRGRecordViewController.m in Sources */,
+				FF74BA1220FF386100542570 /* WRGOverviewView.m in Sources */,
+				FFDB91CE20FF1B82004FE9E4 /* WRGTabBarController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFF7879620FDDE0300771C71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFF7879F20FDDE0300771C71 /* KeepAccountsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFF787A120FDDE0300771C71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFF787AA20FDDE0300771C71 /* KeepAccountsUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FFF7879C20FDDE0300771C71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFF7878120FDDE0100771C71 /* KeepAccounts */;
+			targetProxy = FFF7879B20FDDE0300771C71 /* PBXContainerItemProxy */;
+		};
+		FFF787A720FDDE0300771C71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFF7878120FDDE0100771C71 /* KeepAccounts */;
+			targetProxy = FFF787A620FDDE0300771C71 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FFF787AC20FDDE0300771C71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FFF787AD20FDDE0300771C71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FFF787AF20FDDE0300771C71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCC9BD87DE6C8F8B5053915C /* Pods-KeepAccounts.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z6NPF3BKM8;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/KeepAccounts/GlobalFiles/PrefixHeader.pch";
+				INFOPLIST_FILE = KeepAccounts/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = win.wangruiguo.KeepAccounts;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		FFF787B020FDDE0300771C71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A073CB31BCA778D0A5AF3F9 /* Pods-KeepAccounts.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z6NPF3BKM8;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/KeepAccounts/GlobalFiles/PrefixHeader.pch";
+				INFOPLIST_FILE = KeepAccounts/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = win.wangruiguo.KeepAccounts;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		FFF787B220FDDE0300771C71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z6NPF3BKM8;
+				INFOPLIST_FILE = KeepAccountsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = win.wangruiguo.KeepAccountsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeepAccounts.app/KeepAccounts";
+			};
+			name = Debug;
+		};
+		FFF787B320FDDE0300771C71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z6NPF3BKM8;
+				INFOPLIST_FILE = KeepAccountsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = win.wangruiguo.KeepAccountsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeepAccounts.app/KeepAccounts";
+			};
+			name = Release;
+		};
+		FFF787B520FDDE0300771C71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z6NPF3BKM8;
+				INFOPLIST_FILE = KeepAccountsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = win.wangruiguo.KeepAccountsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KeepAccounts;
+			};
+			name = Debug;
+		};
+		FFF787B620FDDE0300771C71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z6NPF3BKM8;
+				INFOPLIST_FILE = KeepAccountsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = win.wangruiguo.KeepAccountsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KeepAccounts;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FFF7877D20FDDE0100771C71 /* Build configuration list for PBXProject "KeepAccounts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFF787AC20FDDE0300771C71 /* Debug */,
+				FFF787AD20FDDE0300771C71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFF787AE20FDDE0300771C71 /* Build configuration list for PBXNativeTarget "KeepAccounts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFF787AF20FDDE0300771C71 /* Debug */,
+				FFF787B020FDDE0300771C71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFF787B120FDDE0300771C71 /* Build configuration list for PBXNativeTarget "KeepAccountsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFF787B220FDDE0300771C71 /* Debug */,
+				FFF787B320FDDE0300771C71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFF787B420FDDE0300771C71 /* Build configuration list for PBXNativeTarget "KeepAccountsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFF787B520FDDE0300771C71 /* Debug */,
+				FFF787B620FDDE0300771C71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FFF7877A20FDDE0100771C71 /* Project object */;
+}
