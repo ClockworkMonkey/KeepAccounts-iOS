@@ -9,12 +9,15 @@
 #import "WRGCategoryView.h"
 #import "WRGCategoryFlowLayout.h"
 #import "WRGCategoryCell.h"
+#import "WRGAddSubcategoryCell.h"
 #import "WRGCategoryHeaderView.h"
 
 NSString *const kCategoryCellID = @"CategoryCell";
+NSString *const kAddCategoryCellID = @"AddCategoryCell";
 NSString *const kCategoryHeaderID = @"CategoryHeader";
 
-@interface WRGCategoryView () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface WRGCategoryView ()
+<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) UICollectionView *collectionView;
 @end
 
@@ -37,6 +40,7 @@ NSString *const kCategoryHeaderID = @"CategoryHeader";
     self.collectionView.showsHorizontalScrollIndicator = NO;
     self.collectionView.showsVerticalScrollIndicator = NO;
     [self.collectionView registerClass:[WRGCategoryCell class] forCellWithReuseIdentifier:kCategoryCellID];
+    [self.collectionView registerClass:[WRGAddSubcategoryCell class] forCellWithReuseIdentifier:kAddCategoryCellID];
     [self.collectionView registerClass:[WRGCategoryHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:kCategoryHeaderID];
     self.collectionView.backgroundColor = COLOR_BG_WHITE;
     
@@ -50,6 +54,9 @@ NSString *const kCategoryHeaderID = @"CategoryHeader";
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    if (section == 0) {
+        return 10;
+    }
     return 0;
 }
 
@@ -61,8 +68,16 @@ NSString *const kCategoryHeaderID = @"CategoryHeader";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     WRGCategoryCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCategoryCellID forIndexPath:indexPath];
+    WRGAddSubcategoryCell *addCell = [collectionView dequeueReusableCellWithReuseIdentifier:kAddCategoryCellID forIndexPath:indexPath];
     cell.backgroundColor = COLOR_RANDOM;
+    if (indexPath.row == 9) {
+        return addCell;
+    }
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"section = %ld // row = %ld", indexPath.section, indexPath.row);
 }
 
 @end
