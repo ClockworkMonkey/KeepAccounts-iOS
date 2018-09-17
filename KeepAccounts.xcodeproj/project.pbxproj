@@ -25,6 +25,7 @@
 		FF74E351213A90790040394C /* WRGCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF74E350213A90790040394C /* WRGCategoryView.m */; };
 		FF74E354213A93020040394C /* WRGCategoryHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF74E353213A93020040394C /* WRGCategoryHeaderView.m */; };
 		FF74E359213AC0720040394C /* WRGCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF74E358213AC0720040394C /* WRGCategoryCell.m */; };
+		FF8F3A1C214741BA00FA382E /* WRGAddSubcategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8F3A1B214741BA00FA382E /* WRGAddSubcategoryCell.m */; };
 		FF938297210DB7E600977C03 /* WRGSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF938296210DB7E600977C03 /* WRGSettingViewController.m */; };
 		FF93829A210DBC8A00977C03 /* WRGMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF938299210DBC8A00977C03 /* WRGMeViewController.m */; };
 		FFAD53E4210DF53100DF3194 /* SettingsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFAD53E3210DF53100DF3194 /* SettingsList.plist */; };
@@ -99,6 +100,8 @@
 		FF74E353213A93020040394C /* WRGCategoryHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGCategoryHeaderView.m; sourceTree = "<group>"; };
 		FF74E357213AC0720040394C /* WRGCategoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGCategoryCell.h; sourceTree = "<group>"; };
 		FF74E358213AC0720040394C /* WRGCategoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGCategoryCell.m; sourceTree = "<group>"; };
+		FF8F3A1A214741BA00FA382E /* WRGAddSubcategoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGAddSubcategoryCell.h; sourceTree = "<group>"; };
+		FF8F3A1B214741BA00FA382E /* WRGAddSubcategoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGAddSubcategoryCell.m; sourceTree = "<group>"; };
 		FF938295210DB7E600977C03 /* WRGSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGSettingViewController.h; sourceTree = "<group>"; };
 		FF938296210DB7E600977C03 /* WRGSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGSettingViewController.m; sourceTree = "<group>"; };
 		FF938298210DBC8A00977C03 /* WRGMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGMeViewController.h; sourceTree = "<group>"; };
@@ -213,6 +216,8 @@
 				FF74E353213A93020040394C /* WRGCategoryHeaderView.m */,
 				FF74E357213AC0720040394C /* WRGCategoryCell.h */,
 				FF74E358213AC0720040394C /* WRGCategoryCell.m */,
+				FF8F3A1A214741BA00FA382E /* WRGAddSubcategoryCell.h */,
+				FF8F3A1B214741BA00FA382E /* WRGAddSubcategoryCell.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -617,6 +622,7 @@
 				FFDB91E820FF2529004FE9E4 /* WRGRecordViewController.m in Sources */,
 				FF74BA1220FF386100542570 /* WRGOverviewView.m in Sources */,
 				FFDB91CE20FF1B82004FE9E4 /* WRGTabBarController.m in Sources */,
+				FF8F3A1C214741BA00FA382E /* WRGAddSubcategoryCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
