@@ -17,54 +17,51 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
-    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.view.backgroundColor = COLOR_RANDOM;
     
     [self setupRecordView];
 }
 
 - (void)setupRecordView {
+    self.view.backgroundColor = COLOR_BG_WHITE;
+    
     UIView *navigationView = [[UIView alloc] init];
     [self.view addSubview:navigationView];
     navigationView.backgroundColor = COLOR_RANDOM;
     
     UIButton *dismissButton = [[UIButton alloc] init];
     [navigationView addSubview:dismissButton];
-    dismissButton.titleLabel.font = [UIFont systemFontOfSize:15.f];
-    [dismissButton setTitle:@"消失" forState:UIControlStateNormal];
+    [dismissButton setImage:[UIImage imageNamed:@"btn_dismiss"] forState:UIControlStateNormal];
     [dismissButton addTarget:self action:@selector(dismissButtonAction) forControlEvents:UIControlEventTouchUpInside];
-    dismissButton.backgroundColor = COLOR_RANDOM;
     
-    NSArray *itemArray = @[@"支出", @"收入"];
+    NSArray *itemArray = @[@"流出", @"流入", @"内部转账"];
     UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:itemArray];
     [navigationView addSubview:segmentedControl];
     
     
     UIView *moneyView = [[UIView alloc] init];
     [self.view addSubview:moneyView];
-    moneyView.backgroundColor = COLOR_RANDOM;
     
-    UILabel *moneyLabel = [UILabel labelWithFontSize:15.f text:@"金额"];
+    UILabel *moneyLabel = [UILabel labelWithFontSize:15.f text:@"账单金额"];
     [moneyView addSubview:moneyLabel];
-    moneyLabel.backgroundColor = COLOR_RANDOM;
+    moneyLabel.textColor = COLOR_TEXT_DEFAULT;
     
     UITextField *moneyField = [[UITextField alloc] init];
     [moneyView addSubview:moneyField];
-    moneyField.backgroundColor = COLOR_RANDOM;
+    moneyField.textAlignment = NSTextAlignmentRight;
     
     [navigationView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.equalTo(self.view);
-        make.height.mas_equalTo(80.f);
+        make.height.mas_equalTo(40.f + kTopSafeHeight);
     }];
     
     [dismissButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.bottom.equalTo(navigationView).inset(kMargin / 2.f);
+        make.left.equalTo(navigationView).inset(kMargin);
+        make.bottom.equalTo(navigationView).inset(kMargin / 2.f);
+        make.width.height.mas_equalTo(25.f);
     }];
     
     [segmentedControl mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -74,7 +71,7 @@
     
     [moneyView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(navigationView.mas_bottom);
-        make.left.right.equalTo(self.view);
+        make.left.right.equalTo(self.view).inset(kMargin * 1.5f);
         make.height.mas_equalTo(60.f);
     }];
     

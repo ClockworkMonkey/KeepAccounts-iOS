@@ -11,7 +11,7 @@
 
 static CGFloat const smallFontSize = 12.f;
 static CGFloat const commonFontSize = 15.f;
-static CGFloat const bigFontSize = 25.f;
+static CGFloat const bigFontSize = 30.f;
 
 
 @interface WRGOverviewView ()
@@ -27,19 +27,18 @@ static CGFloat const bigFontSize = 25.f;
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = COLOR_RANDOM;
         [self setupOverviewView];
     }
     return self;
 }
 
 - (void)setupOverviewView {
+    self.backgroundColor = COLOR_COMMON_BLACK;
     
     UILabel *topTitleLabel = [UILabel labelWithFontSize:commonFontSize text:@"本月支出（元）"];
     [self addSubview:topTitleLabel];
     
-    self.expensesLabel = [UILabel labelWithFontSize:smallFontSize text:@"暂无支出"];
-    self.expensesLabel.font = [UIFont boldSystemFontOfSize:bigFontSize];
+    self.expensesLabel = [UILabel labelWithFontSize:bigFontSize text:@"暂无支出"];
     [self addSubview:self.expensesLabel];
     
     UIView *leftView = [[UIView alloc] init];
@@ -61,7 +60,7 @@ static CGFloat const bigFontSize = 25.f;
     [rightView addSubview:self.bidgetLabel];
     
     [topTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self).inset(kMargin * 3 + kTopSafeHeight);
+        make.top.equalTo(self).inset(kMargin * 5 + kTopSafeHeight);
         make.left.equalTo(self).inset(kMargin);
     }];
     
@@ -71,10 +70,10 @@ static CGFloat const bigFontSize = 25.f;
     }];
     
     [leftView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.expensesLabel.mas_bottom).inset(kMargin);
+        make.top.equalTo(self.expensesLabel.mas_bottom).inset(kMargin * 1.5f);
         make.left.equalTo(self).inset(kMargin);
         make.bottom.equalTo(leftTitleLabel.mas_bottom);
-        make.bottom.equalTo(self.mas_bottom).inset(kMargin);
+        make.bottom.equalTo(self.mas_bottom).inset(kMargin * 2.f);
     }];
     
     [rightView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -87,22 +86,23 @@ static CGFloat const bigFontSize = 25.f;
     [leftTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.equalTo(leftView);
         make.right.equalTo(self.incomeLabel.mas_left).inset(kMargin);
-        make.width.lessThanOrEqualTo(self.incomeLabel);
+        make.width.priority(MASLayoutPriorityDefaultMedium);
     }];
 
     [self.incomeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.right.equalTo(leftView);
     }];
-//
-//    [rightTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.left.equalTo(rightView);
-//        make.width.lessThanOrEqualTo(self.bidgetLabel);
-//    }];
-//
-//    [self.bidgetLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.right.mas_equalTo(rightView);
-//        make.left.equalTo(rightTitleLabel.mas_right).offset(kMargin * 0.5f);
-//    }];
+
+    [rightTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.equalTo(rightView);
+        make.right.equalTo(self.bidgetLabel.mas_left).inset(kMargin);
+        make.width.priority(MASLayoutPriorityDefaultMedium);
+    }];
+
+    [self.bidgetLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.right.mas_equalTo(rightView);
+        make.left.equalTo(rightTitleLabel.mas_right).offset(kMargin * 0.5f);
+    }];
     
 }
 
