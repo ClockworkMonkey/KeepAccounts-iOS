@@ -16,9 +16,9 @@ CGFloat const kItemWH = 50.f;
     [super prepareLayout];
     
     self.itemSize = CGSizeMake(kItemWH, kItemWH);
-    self.sectionInset = UIEdgeInsetsMake(10, 15, 15, 15);
+    self.sectionInset = UIEdgeInsetsMake(0, 15, 0, 15);
     self.minimumInteritemSpacing = 10.f;
-    self.minimumLineSpacing = 20.f;
+    self.minimumLineSpacing = 10.f;
     self.headerReferenceSize = CGSizeMake(self.collectionView.bounds.size.width, 50);
 }
 
