@@ -44,5 +44,6 @@
 #define COLOR_CATEGORY_YELLOW COLOR_RGB(250, 200, 60)
 
 #define kMargin 10.f
+#define kTopSafeHeight 38.f
 
 #endif /* PrefixHeader_pch */

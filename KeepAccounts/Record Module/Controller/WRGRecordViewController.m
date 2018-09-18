@@ -60,7 +60,7 @@
     
     [navigationView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.equalTo(self.view);
-        make.height.mas_equalTo(60.f);
+        make.height.mas_equalTo(80.f);
     }];
     
     [dismissButton mas_makeConstraints:^(MASConstraintMaker *make) {
