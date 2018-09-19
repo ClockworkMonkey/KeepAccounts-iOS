@@ -8,18 +8,15 @@
 
 #import "WRGOverviewView.h"
 
-
-static CGFloat const smallFontSize = 12.f;
-static CGFloat const commonFontSize = 15.f;
-static CGFloat const bigFontSize = 30.f;
-
+CGFloat const kSmallFontSize = 12.f;
+CGFloat const kCommonFontSize = 15.f;
+CGFloat const kBigFontSize = 30.f;
 
 @interface WRGOverviewView ()
 @property (nonatomic, strong) UILabel *expensesLabel;
 @property (nonatomic, strong) UILabel *incomeLabel;
 @property (nonatomic, strong) UILabel *bidgetLabel;
 @end
-
 
 @implementation WRGOverviewView
 
@@ -35,28 +32,28 @@ static CGFloat const bigFontSize = 30.f;
 - (void)setupOverviewView {
     self.backgroundColor = COLOR_COMMON_BLACK;
     
-    UILabel *topTitleLabel = [UILabel labelWithFontSize:commonFontSize text:@"本月支出（元）"];
+    UILabel *topTitleLabel = [UILabel labelWithFontSize:kCommonFontSize text:@"本月支出（元）"];
     [self addSubview:topTitleLabel];
     
-    self.expensesLabel = [UILabel labelWithFontSize:bigFontSize text:@"暂无支出"];
+    self.expensesLabel = [UILabel labelWithFontSize:kBigFontSize text:@"暂无支出"];
     [self addSubview:self.expensesLabel];
     
     UIView *leftView = [[UIView alloc] init];
     [self addSubview:leftView];
     
-    UILabel *leftTitleLabel = [UILabel labelWithFontSize:smallFontSize text:@"本月收入"];
+    UILabel *leftTitleLabel = [UILabel labelWithFontSize:kSmallFontSize text:@"本月收入"];
     [leftView addSubview:leftTitleLabel];
     
-    self.incomeLabel = [UILabel labelWithFontSize:smallFontSize text:@"暂无收入"];
+    self.incomeLabel = [UILabel labelWithFontSize:kSmallFontSize text:@"暂无收入"];
     [leftView addSubview:self.incomeLabel];
     
     UIView *rightView = [[UIView alloc] init];
     [self addSubview:rightView];
     
-    UILabel *rightTitleLabel = [UILabel labelWithFontSize:smallFontSize text:@"预算剩余"];
+    UILabel *rightTitleLabel = [UILabel labelWithFontSize:kSmallFontSize text:@"预算剩余"];
     [rightView addSubview:rightTitleLabel];
     
-    self.bidgetLabel = [UILabel labelWithFontSize:smallFontSize text:@"暂无"];
+    self.bidgetLabel = [UILabel labelWithFontSize:kSmallFontSize text:@"暂无"];
     [rightView addSubview:self.bidgetLabel];
     
     [topTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -86,11 +83,7 @@ static CGFloat const bigFontSize = 30.f;
     [leftTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.equalTo(leftView);
         make.right.equalTo(self.incomeLabel.mas_left).inset(kMargin);
-<<<<<<< HEAD
-        make.width.priority(MASLayoutPriorityDefaultHigh);
-=======
         make.width.priority(MASLayoutPriorityDefaultMedium);
->>>>>>> 9ef3620fef40a23ef66a1e1bfec292b4b4288857
     }];
 
     [self.incomeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -99,16 +92,12 @@ static CGFloat const bigFontSize = 30.f;
 
     [rightTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.equalTo(rightView);
-<<<<<<< HEAD
-=======
         make.right.equalTo(self.bidgetLabel.mas_left).inset(kMargin);
         make.width.priority(MASLayoutPriorityDefaultMedium);
->>>>>>> 9ef3620fef40a23ef66a1e1bfec292b4b4288857
     }];
 
     [self.bidgetLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.right.mas_equalTo(rightView);
-        make.left.equalTo(rightTitleLabel.mas_right).offset(kMargin * 0.5f);
     }];
     
 }
