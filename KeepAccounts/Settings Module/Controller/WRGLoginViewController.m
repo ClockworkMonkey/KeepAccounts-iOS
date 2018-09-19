@@ -21,6 +21,7 @@ static CGFloat const kIconMinWH = 60.f;
 @property (nonatomic, strong) UILabel *appNameLabel;
 @property (nonatomic, strong) UITextField *accountField;
 @property (nonatomic, strong) UITextField *passwordField;
+@property (nonatomic, strong) UILabel *reminderLabel;
 @property (nonatomic, assign) NSTimeInterval keyboardAnimationDuration;
 @end
 
@@ -108,6 +109,7 @@ static CGFloat const kIconMinWH = 60.f;
     self.accountField.placeholder = @"请输入网易邮箱账号";
     self.accountField.font = [UIFont systemFontOfSize:13];
     self.accountField.textColor = COLOR_TEXT_DEFAULT;
+    self.accountField.keyboardType = UIKeyboardTypeEmailAddress;
     
     UIView *acSeparatorView = [[UIView alloc] init];
     [inputView addSubview:acSeparatorView];
@@ -121,12 +123,17 @@ static CGFloat const kIconMinWH = 60.f;
     [inputView addSubview:self.passwordField];
     self.passwordField.clearButtonMode = UITextFieldViewModeAlways;
     self.passwordField.placeholder = @"请输入账号密码";
-    self.passwordField.font = [UIFont systemFontOfSize:13];
+    self.passwordField.font = [UIFont systemFontOfSize:13.f];
     self.passwordField.textColor = COLOR_TEXT_DEFAULT;
+    self.passwordField.keyboardType = UIKeyboardTypeASCIICapable;
     
     UIView *pwSeparatorView = [[UIView alloc] init];
     [inputView addSubview:pwSeparatorView];
     pwSeparatorView.backgroundColor = COLOR_UI_GRAY;
+    
+    self.reminderLabel = [UILabel labelWithFontSize:12.f text:@""];
+    [self.centerContentView addSubview:self.reminderLabel];
+    self.reminderLabel.textColor = COLOR_TEXT_RED;
     
     UIButton *loginButton = [[UIButton alloc] init];
     [self.centerContentView addSubview:loginButton];
@@ -246,8 +253,14 @@ static CGFloat const kIconMinWH = 60.f;
         make.height.mas_equalTo(kSeparatorW);
     }];
     
+    [self.reminderLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(inputView.mas_bottom).offset(kMargin * 0.5f);
+        make.left.right.equalTo(self.centerContentView).inset(kMargin * 2.f);
+        make.height.mas_equalTo(kMargin * 2.f);
+    }];
+    
     [loginButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(inputView.mas_bottom).offset(kMargin * 3.f);
+        make.top.mas_equalTo(self.reminderLabel.mas_bottom).offset(kMargin * 1.f);
         make.left.right.equalTo(self.centerContentView).inset(kMargin * 2.f);
     }];
     
@@ -291,7 +304,33 @@ static CGFloat const kIconMinWH = 60.f;
 }
 
 - (void)loginButtonAction {
-    NSLog(@"loginButtonAction");
+    NSString *email = self.accountField.text;
+    NSString *password = self.passwordField.text;
+    
+    if (![self validateEmail:email]) {
+        self.reminderLabel.text = @"邮箱格式不正确";
+        return;
+    }
+    
+    if (![self validatePassword:password]) {
+        self.reminderLabel.text = @"密码格式不正确";
+        return;
+    }
+    
+//    [self loginWithEMail:email password:password];
+}
+
+
+- (BOOL)validateEmail:(NSString *)emailString {
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *emailPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailPredicate evaluateWithObject:emailString];
+}
+
+- (BOOL)validatePassword:(NSString *)passwordString {
+    NSString *passwordRegex = @"^(?![0-9]+$)(?![a-zA-Z]+$)[a-zA-Z0-9]{6,18}";
+    NSPredicate *passwordPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", passwordRegex];
+    return [passwordPredicate evaluateWithObject:passwordString];
 }
 
 - (void)backButtonAction {
@@ -370,6 +409,25 @@ static CGFloat const kIconMinWH = 60.f;
     animationGroup.removedOnCompletion = NO;
     animationGroup.fillMode = kCAFillModeForwards;
     [self.topContentView.layer addAnimation:animationGroup forKey:@"Position_Scale_Reverse"];
+}
+
+- (void)loginWithEMail:(NSString *)email password:(NSString *)password {
+    NSURL *url = [NSURL URLWithString:@"http://localhost:3000/users/login.do"];
+    NSString *paramsStr = [NSString stringWithFormat:@"email=%@&password=%@", email, password];
+    NSData *paramsData = [paramsStr dataUsingEncoding:NSUTF8StringEncoding];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    request.HTTPMethod = @"POST";
+    request.HTTPBody = paramsData;
+    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"%@", error);
+        } else {
+            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+            NSLog(@"%@", dic);
+        }
+    }];
+    
+    [task resume];
 }
 
 @end
