@@ -87,22 +87,21 @@ static CGFloat const bigFontSize = 25.f;
     [leftTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.equalTo(leftView);
         make.right.equalTo(self.incomeLabel.mas_left).inset(kMargin);
-        make.width.lessThanOrEqualTo(self.incomeLabel);
+        make.width.priority(MASLayoutPriorityDefaultHigh);
     }];
 
     [self.incomeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.right.equalTo(leftView);
     }];
-//
-//    [rightTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.left.equalTo(rightView);
-//        make.width.lessThanOrEqualTo(self.bidgetLabel);
-//    }];
-//
-//    [self.bidgetLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.right.mas_equalTo(rightView);
-//        make.left.equalTo(rightTitleLabel.mas_right).offset(kMargin * 0.5f);
-//    }];
+
+    [rightTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.equalTo(rightView);
+    }];
+
+    [self.bidgetLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.right.mas_equalTo(rightView);
+        make.left.equalTo(rightTitleLabel.mas_right).offset(kMargin * 0.5f);
+    }];
     
 }
 
