@@ -25,7 +25,7 @@
     // Do any additional setup after loading the view.
     
     self.navigationController.navigationBar.hidden = YES;
-    self.view.backgroundColor = COLOR_RANDOM;
+    self.view.backgroundColor = COLOR_BG_WHITE;
     
     [self setupHomePageView];
 }
@@ -36,17 +36,16 @@
     
     UIView *recordView = [[UIView alloc] init];
     [self.view addSubview:recordView];
-    recordView.backgroundColor = COLOR_RANDOM;
+    recordView.backgroundColor = COLOR_COMMON_RED;
     
     UIView *separatorView = [[UIView alloc] init];
     [recordView addSubview:separatorView];
-    separatorView.backgroundColor = COLOR_UI_WHITE;
+    separatorView.backgroundColor = COLOR_BG_GRAY;
     
     self.recordButton = [[UIButton alloc] init];
     [recordView addSubview:self.recordButton];
     self.recordButton.titleLabel.textColor = [UIColor whiteColor];
     self.recordButton.titleLabel.font = [UIFont systemFontOfSize:20.f];
-    self.recordButton.backgroundColor = COLOR_RANDOM;
     [self.recordButton setTitle:@"记一笔" forState:UIControlStateNormal];
     [self.recordButton addTarget:self action:@selector(recordButtonAction) forControlEvents:UIControlEventTouchUpInside];
 
@@ -54,7 +53,6 @@
     [recordView addSubview:self.addAssetButton];
     self.addAssetButton.titleLabel.textColor = [UIColor whiteColor];
     self.addAssetButton.titleLabel.font = [UIFont systemFontOfSize:12.f];
-    self.addAssetButton.backgroundColor = COLOR_RANDOM;
     [self.addAssetButton setTitle:@"添加资产" forState:UIControlStateNormal];
     [self.addAssetButton addTarget:self action:@selector(recordButtonAction) forControlEvents:UIControlEventTouchUpInside];
     
@@ -68,12 +66,12 @@
     [recordView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.overviewView.mas_bottom).offset(kMargin);
         make.left.right.equalTo(self.view).inset(kMargin);
-        make.height.mas_equalTo(30.f);
+        make.height.mas_equalTo(40.f);
     }];
     
     [separatorView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.bottom.equalTo(recordView).inset(kMargin * 0.5f);
-        make.width.mas_equalTo(1.f);
+        make.top.bottom.equalTo(recordView).inset(kMargin);
+        make.width.mas_equalTo(0.3f);
         make.centerX.equalTo(recordView).multipliedBy(1.5f);
         make.centerY.equalTo(recordView);
     }];

@@ -24,18 +24,21 @@ static CGFloat const smallFontSize = 15.f;
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = COLOR_RANDOM;
         [self setupRecentlyBillView];
     }
     return self;
 }
 
 - (void)setupRecentlyBillView {
+    self.backgroundColor = COLOR_BG_WHITE;
+    
     UILabel *topTitleLabel = [UILabel labelWithFontSize:smallFontSize text:@"最近三日新增账单"];
     [self addSubview:topTitleLabel];
+    topTitleLabel.textColor = COLOR_TEXT_BLACK;
     
     self.amountLabel = [UILabel labelWithFontSize:smallFontSize text:@"0笔"];
     [self addSubview:self.amountLabel];
+    self.amountLabel.textColor = COLOR_TEXT_GRAY;
     
     [topTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.equalTo(self).inset(margin);
