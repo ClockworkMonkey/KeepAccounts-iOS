@@ -12,10 +12,9 @@
 #import "WRGFirstLevelSettingModel.h"
 #import "WRGLoginViewController.h"
 #import "WRGSettingViewController.h"
+#import "WRGAccountViewController.h"
 
-
-static CGFloat const kUserInfoVH = 150.f;
-
+CGFloat const kUserInfoVH = 150.f;
 
 @interface WRGMeViewController ()
 <WRGFirstLevelSettingDelegate>
@@ -60,16 +59,22 @@ static CGFloat const kUserInfoVH = 150.f;
     
     UIView *contentView = [[UIView alloc] init];
     [self.scrollView addSubview:contentView];
-    contentView.backgroundColor = COLOR_RANDOM;
+    contentView.backgroundColor = COLOR_UI_GRAY;
     
     self.userInfoView = [[WRGUserInfoView alloc] init];
     [contentView addSubview:self.userInfoView];
     
     __weak typeof(self) weakSelf = self;
     [self.userInfoView addTapAction:^(id sender) {
-        WRGLoginViewController *loginVC = [[WRGLoginViewController alloc] init];
         __strong typeof(self) strongSelf = weakSelf;
-        [strongSelf.navigationController pushViewController:loginVC animated:YES];
+        UIViewController *viewController = nil;
+        if ([[NSUserDefaults standardUserDefaults] valueForKey:@"User_Name"]) {
+            viewController = [[WRGAccountViewController alloc] init];
+        } else {
+            viewController = [[WRGLoginViewController alloc] init];
+        }
+        viewController.hidesBottomBarWhenPushed = YES;
+        [strongSelf.navigationController pushViewController:viewController animated:YES];
     }];
     
     self.adSettingView = [[WRGFirstLevelSettingView alloc] initWithDataArray:self.adSettingDataMArray];
@@ -140,7 +145,6 @@ static CGFloat const kUserInfoVH = 150.f;
         }
     }
 }
-
 
 - (NSMutableArray *)adSettingDataMArray {
     if (_adSettingDataMArray == nil) {

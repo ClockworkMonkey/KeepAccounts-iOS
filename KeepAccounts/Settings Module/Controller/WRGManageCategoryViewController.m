@@ -7,10 +7,12 @@
 //
 
 #import "WRGManageCategoryViewController.h"
-#import "WRGManageSubcategoryViewController.h"
+#import "WRGEditCategoryViewController.h"
+#import "WRGEditSubcategoryViewController.h"
 #import "WRGCategoryView.h"
+#import "WRGCategoryModel.h"
 
-@interface WRGManageCategoryViewController ()
+@interface WRGManageCategoryViewController () <WRGCategoryViewDelegate>
 @property (nonatomic, strong) WRGCategoryView *categoryView;
 @end
 
@@ -26,6 +28,7 @@
     [self setupManageCategoryView];
 }
 
+
 - (void)setupManageCategoryView {
     UIView *classifyView = [[UIView alloc] init];
     [self.view addSubview:classifyView];
@@ -34,6 +37,7 @@
     self.categoryView = [[WRGCategoryView alloc] init];
     [self.view addSubview:self.categoryView];
     self.categoryView.backgroundColor = COLOR_RANDOM;
+    self.categoryView.delegate = self;
     
     UIView *addCategoryView = [[UIView alloc] init];
     [self.view addSubview:addCategoryView];
@@ -81,9 +85,36 @@
 }
 
 - (void)addCategoryButtonAction {
-    NSLog(@"buttonAction");
-    WRGManageSubcategoryViewController *manageSubVC = [[WRGManageSubcategoryViewController alloc] init];
-    [self.navigationController pushViewController:manageSubVC animated:YES];
+    
+}
+
+- (void)didSelectItemWithCategoryModel:(WRGCategoryModel *)categoryModel subcategoryModel:(WRGCategoryModel *)subcategoryModel {
+    WRGEditSubcategoryViewController *editSubcategoryVC = [[WRGEditSubcategoryViewController alloc] init];
+    editSubcategoryVC.category = categoryModel;
+    editSubcategoryVC.subcategory = subcategoryModel;
+    [self.navigationController pushViewController:editSubcategoryVC animated:YES];
+}
+
+
+
+- (void)addCategory {
+    WRGEditCategoryViewController *editVC = [[WRGEditCategoryViewController alloc] init];
+    [self.navigationController pushViewController:editVC animated:YES];
+}
+
+- (void)editCategory {
+    WRGEditCategoryViewController *editVC = [[WRGEditCategoryViewController alloc] init];
+    [self.navigationController pushViewController:editVC animated:YES];
+}
+
+- (void)addSubcategory {
+    WRGEditCategoryViewController *editVC = [[WRGEditCategoryViewController alloc] init];
+    [self.navigationController pushViewController:editVC animated:YES];
+}
+
+- (void)editSubcategory {
+    WRGEditCategoryViewController *editVC = [[WRGEditCategoryViewController alloc] init];
+    [self.navigationController pushViewController:editVC animated:YES];
 }
 
 @end

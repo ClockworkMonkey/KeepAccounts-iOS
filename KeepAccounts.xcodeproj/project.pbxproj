@@ -10,10 +10,12 @@
 		A8E65EE1065B6AC0EADD05C9 /* Pods_KeepAccounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3A6168587CCC1D0F057671 /* Pods_KeepAccounts.framework */; };
 		FF0011282113D71000DFCEC2 /* WRGHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0011272113D71000DFCEC2 /* WRGHomePageViewController.m */; };
 		FF00112B2113D94900DFCEC2 /* WRGBillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF00112A2113D94900DFCEC2 /* WRGBillViewController.m */; };
+		FF01D0122156847E00191D65 /* NSString+WRGString.m in Sources */ = {isa = PBXBuildFile; fileRef = FF01D0112156847E00191D65 /* NSString+WRGString.m */; };
+		FF01D0152156942000191D65 /* WRGCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FF01D0142156942000191D65 /* WRGCategoryModel.m */; };
+		FF0D836F216DAA500036A038 /* WRGEditSubcategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0D836E216DAA500036A038 /* WRGEditSubcategoryViewController.m */; };
 		FF504A762136926400CCF0BA /* WRGSubcategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF504A752136926400CCF0BA /* WRGSubcategoryView.m */; };
 		FF504A79213696DB00CCF0BA /* WRGSubcategoryFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FF504A78213696DB00CCF0BA /* WRGSubcategoryFlowLayout.m */; };
 		FF504A7C2136972E00CCF0BA /* WRGSubcategoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF504A7B2136972E00CCF0BA /* WRGSubcategoryViewCell.m */; };
-		FF504A7F2136991F00CCF0BA /* WRGManageSubcategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF504A7E2136991F00CCF0BA /* WRGManageSubcategoryViewController.m */; };
 		FF504A82213699C700CCF0BA /* WRGManageCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF504A81213699C700CCF0BA /* WRGManageCategoryViewController.m */; };
 		FF50701E2106A8DC00FC5A46 /* WRGFirstLevelSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF50701D2106A8DC00FC5A46 /* WRGFirstLevelSettingView.m */; };
 		FF5070242106D54C00FC5A46 /* WRGFirstLevelSettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5070232106D54C00FC5A46 /* WRGFirstLevelSettingModel.m */; };
@@ -21,6 +23,8 @@
 		FF50702D2107129E00FC5A46 /* UIImage+CustomImage.m in Sources */ = {isa = PBXBuildFile; fileRef = FF50702C2107129E00FC5A46 /* UIImage+CustomImage.m */; };
 		FF5070302107262C00FC5A46 /* WRGLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF50702F2107262C00FC5A46 /* WRGLoginViewController.m */; };
 		FF5070332107274900FC5A46 /* WRGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5070322107274900FC5A46 /* WRGUser.m */; };
+		FF54CBDF21537558000087D3 /* WRGAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF54CBDE21537558000087D3 /* WRGAccountViewController.m */; };
+		FF54CBE221538C6E000087D3 /* UIButton+CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FF54CBE121538C6E000087D3 /* UIButton+CustomButton.m */; };
 		FF74BA1220FF386100542570 /* WRGOverviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF74BA1120FF386100542570 /* WRGOverviewView.m */; };
 		FF74E351213A90790040394C /* WRGCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF74E350213A90790040394C /* WRGCategoryView.m */; };
 		FF74E354213A93020040394C /* WRGCategoryHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF74E353213A93020040394C /* WRGCategoryHeaderView.m */; };
@@ -41,6 +45,7 @@
 		FFF7879520FDDE0300771C71 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF7879420FDDE0300771C71 /* main.m */; };
 		FFF7879F20FDDE0300771C71 /* KeepAccountsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF7879E20FDDE0300771C71 /* KeepAccountsTests.m */; };
 		FFF787AA20FDDE0300771C71 /* KeepAccountsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF787A920FDDE0300771C71 /* KeepAccountsUITests.m */; };
+		FFFB89E3216C851300F15E12 /* WRGEditCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFB89E2216C851300F15E12 /* WRGEditCategoryViewController.m */; };
 		FFFD0A27210535EA00871F4D /* UILabel+Generic.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFD0A26210535EA00871F4D /* UILabel+Generic.m */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +74,12 @@
 		FF0011272113D71000DFCEC2 /* WRGHomePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGHomePageViewController.m; sourceTree = "<group>"; };
 		FF0011292113D94900DFCEC2 /* WRGBillViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGBillViewController.h; sourceTree = "<group>"; };
 		FF00112A2113D94900DFCEC2 /* WRGBillViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGBillViewController.m; sourceTree = "<group>"; };
+		FF01D0102156847E00191D65 /* NSString+WRGString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+WRGString.h"; sourceTree = "<group>"; };
+		FF01D0112156847E00191D65 /* NSString+WRGString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+WRGString.m"; sourceTree = "<group>"; };
+		FF01D0132156942000191D65 /* WRGCategoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGCategoryModel.h; sourceTree = "<group>"; };
+		FF01D0142156942000191D65 /* WRGCategoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGCategoryModel.m; sourceTree = "<group>"; };
+		FF0D836D216DAA500036A038 /* WRGEditSubcategoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGEditSubcategoryViewController.h; sourceTree = "<group>"; };
+		FF0D836E216DAA500036A038 /* WRGEditSubcategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGEditSubcategoryViewController.m; sourceTree = "<group>"; };
 		FF162FBA211877BE00275208 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF504A742136926400CCF0BA /* WRGSubcategoryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGSubcategoryView.h; sourceTree = "<group>"; };
 		FF504A752136926400CCF0BA /* WRGSubcategoryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGSubcategoryView.m; sourceTree = "<group>"; };
@@ -76,8 +87,6 @@
 		FF504A78213696DB00CCF0BA /* WRGSubcategoryFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGSubcategoryFlowLayout.m; sourceTree = "<group>"; };
 		FF504A7A2136972E00CCF0BA /* WRGSubcategoryViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGSubcategoryViewCell.h; sourceTree = "<group>"; };
 		FF504A7B2136972E00CCF0BA /* WRGSubcategoryViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGSubcategoryViewCell.m; sourceTree = "<group>"; };
-		FF504A7D2136991F00CCF0BA /* WRGManageSubcategoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGManageSubcategoryViewController.h; sourceTree = "<group>"; };
-		FF504A7E2136991F00CCF0BA /* WRGManageSubcategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGManageSubcategoryViewController.m; sourceTree = "<group>"; };
 		FF504A80213699C700CCF0BA /* WRGManageCategoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGManageCategoryViewController.h; sourceTree = "<group>"; };
 		FF504A81213699C700CCF0BA /* WRGManageCategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGManageCategoryViewController.m; sourceTree = "<group>"; };
 		FF50701C2106A8DC00FC5A46 /* WRGFirstLevelSettingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGFirstLevelSettingView.h; sourceTree = "<group>"; };
@@ -92,6 +101,10 @@
 		FF50702F2107262C00FC5A46 /* WRGLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGLoginViewController.m; sourceTree = "<group>"; };
 		FF5070312107274900FC5A46 /* WRGUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGUser.h; sourceTree = "<group>"; };
 		FF5070322107274900FC5A46 /* WRGUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGUser.m; sourceTree = "<group>"; };
+		FF54CBDD21537558000087D3 /* WRGAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGAccountViewController.h; sourceTree = "<group>"; };
+		FF54CBDE21537558000087D3 /* WRGAccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGAccountViewController.m; sourceTree = "<group>"; };
+		FF54CBE021538C6E000087D3 /* UIButton+CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CustomButton.h"; sourceTree = "<group>"; };
+		FF54CBE121538C6E000087D3 /* UIButton+CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CustomButton.m"; sourceTree = "<group>"; };
 		FF74BA1020FF386100542570 /* WRGOverviewView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGOverviewView.h; sourceTree = "<group>"; };
 		FF74BA1120FF386100542570 /* WRGOverviewView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGOverviewView.m; sourceTree = "<group>"; };
 		FF74E34F213A90790040394C /* WRGCategoryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGCategoryView.h; sourceTree = "<group>"; };
@@ -134,6 +147,8 @@
 		FFF787A520FDDE0300771C71 /* KeepAccountsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeepAccountsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFF787A920FDDE0300771C71 /* KeepAccountsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeepAccountsUITests.m; sourceTree = "<group>"; };
 		FFF787AB20FDDE0300771C71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFFB89E1216C851300F15E12 /* WRGEditCategoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRGEditCategoryViewController.h; sourceTree = "<group>"; };
+		FFFB89E2216C851300F15E12 /* WRGEditCategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRGEditCategoryViewController.m; sourceTree = "<group>"; };
 		FFFD0A25210535EA00871F4D /* UILabel+Generic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Generic.h"; sourceTree = "<group>"; };
 		FFFD0A26210535EA00871F4D /* UILabel+Generic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Generic.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -247,6 +262,10 @@
 				FFDB91CF20FF1C61004FE9E4 /* PrefixHeader.pch */,
 				FFDB91C320FF1728004FE9E4 /* WRGAppDeleage.h */,
 				FFDB91C420FF1728004FE9E4 /* WRGAppDeleage.m */,
+				FF54CBE021538C6E000087D3 /* UIButton+CustomButton.h */,
+				FF54CBE121538C6E000087D3 /* UIButton+CustomButton.m */,
+				FF01D0102156847E00191D65 /* NSString+WRGString.h */,
+				FF01D0112156847E00191D65 /* NSString+WRGString.m */,
 				FFDB91CD20FF1B82004FE9E4 /* WRGTabBarController.h */,
 				FFDB91CC20FF1B82004FE9E4 /* WRGTabBarController.m */,
 				FFDB91C620FF1A77004FE9E4 /* WRGNavigationController.h */,
@@ -322,12 +341,16 @@
 				FF938299210DBC8A00977C03 /* WRGMeViewController.m */,
 				FF50702E2107262C00FC5A46 /* WRGLoginViewController.h */,
 				FF50702F2107262C00FC5A46 /* WRGLoginViewController.m */,
+				FF54CBDD21537558000087D3 /* WRGAccountViewController.h */,
+				FF54CBDE21537558000087D3 /* WRGAccountViewController.m */,
 				FF938295210DB7E600977C03 /* WRGSettingViewController.h */,
 				FF938296210DB7E600977C03 /* WRGSettingViewController.m */,
 				FF504A80213699C700CCF0BA /* WRGManageCategoryViewController.h */,
 				FF504A81213699C700CCF0BA /* WRGManageCategoryViewController.m */,
-				FF504A7D2136991F00CCF0BA /* WRGManageSubcategoryViewController.h */,
-				FF504A7E2136991F00CCF0BA /* WRGManageSubcategoryViewController.m */,
+				FFFB89E1216C851300F15E12 /* WRGEditCategoryViewController.h */,
+				FFFB89E2216C851300F15E12 /* WRGEditCategoryViewController.m */,
+				FF0D836D216DAA500036A038 /* WRGEditSubcategoryViewController.h */,
+				FF0D836E216DAA500036A038 /* WRGEditSubcategoryViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -352,6 +375,8 @@
 			children = (
 				FF5070222106D54C00FC5A46 /* WRGFirstLevelSettingModel.h */,
 				FF5070232106D54C00FC5A46 /* WRGFirstLevelSettingModel.m */,
+				FF01D0132156942000191D65 /* WRGCategoryModel.h */,
+				FF01D0142156942000191D65 /* WRGCategoryModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -594,12 +619,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF504A82213699C700CCF0BA /* WRGManageCategoryViewController.m in Sources */,
-				FF504A7F2136991F00CCF0BA /* WRGManageSubcategoryViewController.m in Sources */,
 				FFBB65282105CFE200065CD1 /* WRGUserInfoView.m in Sources */,
 				FF5070272107007500FC5A46 /* WRGFirstLevelSettingCell.m in Sources */,
 				FFDB91EB20FF253F004FE9E4 /* WRGShowViewController.m in Sources */,
 				FF504A79213696DB00CCF0BA /* WRGSubcategoryFlowLayout.m in Sources */,
 				FFDB91C820FF1A77004FE9E4 /* WRGNavigationController.m in Sources */,
+				FF01D0122156847E00191D65 /* NSString+WRGString.m in Sources */,
 				FFF7879520FDDE0300771C71 /* main.m in Sources */,
 				FFDB91C520FF1728004FE9E4 /* WRGAppDeleage.m in Sources */,
 				FF504A7C2136972E00CCF0BA /* WRGSubcategoryViewCell.m in Sources */,
@@ -607,11 +632,14 @@
 				FFBB65252105C44600065CD1 /* WRGRecentBillView.m in Sources */,
 				FF0011282113D71000DFCEC2 /* WRGHomePageViewController.m in Sources */,
 				FF50701E2106A8DC00FC5A46 /* WRGFirstLevelSettingView.m in Sources */,
+				FF54CBE221538C6E000087D3 /* UIButton+CustomButton.m in Sources */,
 				FF50702D2107129E00FC5A46 /* UIImage+CustomImage.m in Sources */,
 				FF938297210DB7E600977C03 /* WRGSettingViewController.m in Sources */,
 				FF5070332107274900FC5A46 /* WRGUser.m in Sources */,
+				FF54CBDF21537558000087D3 /* WRGAccountViewController.m in Sources */,
 				FFFD0A27210535EA00871F4D /* UILabel+Generic.m in Sources */,
 				FFEA11232144AF7B001E2B40 /* WRGCategoryFlowLayout.m in Sources */,
+				FF0D836F216DAA500036A038 /* WRGEditSubcategoryViewController.m in Sources */,
 				FF00112B2113D94900DFCEC2 /* WRGBillViewController.m in Sources */,
 				FF93829A210DBC8A00977C03 /* WRGMeViewController.m in Sources */,
 				FF74E351213A90790040394C /* WRGCategoryView.m in Sources */,
@@ -620,9 +648,11 @@
 				FF5070242106D54C00FC5A46 /* WRGFirstLevelSettingModel.m in Sources */,
 				FF504A762136926400CCF0BA /* WRGSubcategoryView.m in Sources */,
 				FFDB91E820FF2529004FE9E4 /* WRGRecordViewController.m in Sources */,
+				FF01D0152156942000191D65 /* WRGCategoryModel.m in Sources */,
 				FF74BA1220FF386100542570 /* WRGOverviewView.m in Sources */,
 				FFDB91CE20FF1B82004FE9E4 /* WRGTabBarController.m in Sources */,
 				FF8F3A1C214741BA00FA382E /* WRGAddSubcategoryCell.m in Sources */,
+				FFFB89E3216C851300F15E12 /* WRGEditCategoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -775,7 +805,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = Z6NPF3BKM8;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KeepAccounts/GlobalFiles/PrefixHeader.pch";
 				INFOPLIST_FILE = KeepAccounts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -796,7 +826,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = Z6NPF3BKM8;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KeepAccounts/GlobalFiles/PrefixHeader.pch";
 				INFOPLIST_FILE = KeepAccounts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

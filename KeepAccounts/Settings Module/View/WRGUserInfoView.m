@@ -19,17 +19,25 @@ static CGFloat const kSmallFontSize = 13.f;
 @property (nonatomic, strong) TapViewBlock block;
 @end
 
-
 @implementation WRGUserInfoView
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (void)dealloc {
+    NSLog(@"------");
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
         [self setupUserInfoView];
+        [self updateUserInfo];
+        [self addNotificationObserver];
     }
     return self;
+}
+
+- (void)addNotificationObserver {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateUserInfo) name:@"Noti_Login" object:nil];
 }
 
 - (void)setupUserInfoView {
@@ -39,7 +47,7 @@ static CGFloat const kSmallFontSize = 13.f;
     
     self.imageView = [[UIImageView alloc] init];
     [self addSubview:self.imageView];
-    self.imageView.image = [UIImage imageNamed:@"TestImage"];
+    self.imageView.image = [UIImage imageNamed:@"img_user"];
     self.imageView.layer.cornerRadius = kImageWH / 2;
     self.imageView.layer.masksToBounds = YES;
     
@@ -77,6 +85,7 @@ static CGFloat const kSmallFontSize = 13.f;
     }];
 }
 
+#pragma mark - Action
 - (void)addTapAction:(TapViewBlock)block {
     self.block = block;
 }
@@ -84,6 +93,21 @@ static CGFloat const kSmallFontSize = 13.f;
 - (void)tapAction {
     if (self.block) {
         self.block(self);
+    }
+}
+
+- (void)updateUserInfo {
+    NSString *userName = [[NSUserDefaults standardUserDefaults] valueForKey:@"User_Name"];
+    if (userName) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.nameLabel.text = userName;
+            self.promptLabel.text = @"查看并编辑个人资料";
+        });
+    } else {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.nameLabel.text = @"立即登录";
+            self.promptLabel.text = @"登陆后，在网易云端安全保存你的记账数据";
+        });
     }
 }
 

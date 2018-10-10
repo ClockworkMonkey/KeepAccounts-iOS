@@ -57,7 +57,7 @@ CGFloat const kBigFontSize = 30.f;
     [rightView addSubview:self.bidgetLabel];
     
     [topTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self).inset(kMargin * 5 + kTopSafeHeight);
+        make.top.equalTo(self).inset(kMargin * 3 + kTopSafeHeight);
         make.left.equalTo(self).inset(kMargin);
     }];
     

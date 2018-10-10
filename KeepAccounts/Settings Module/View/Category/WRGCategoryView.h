@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class WRGCategoryModel;
+
+@protocol WRGCategoryViewDelegate <NSObject>
+@optional
+- (void)didSelectItemWithCategoryModel:(WRGCategoryModel *)categoryModel subcategoryModel:(WRGCategoryModel *)subcategoryModel;
+@end
 
 @interface WRGCategoryView : UIView
-
+@property (nonatomic, weak) id <WRGCategoryViewDelegate> delegate;
 @end

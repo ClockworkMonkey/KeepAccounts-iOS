@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+@class WRGCategoryModel;
 
 @interface WRGCategoryHeaderView : UICollectionReusableView
-
+@property (nonatomic, strong) WRGCategoryModel *model;
+- (void)setupHeaderViewWithCategoryModel:(WRGCategoryModel *)model;
 @end

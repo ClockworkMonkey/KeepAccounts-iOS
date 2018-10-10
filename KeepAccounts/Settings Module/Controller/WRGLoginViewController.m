@@ -7,8 +7,9 @@
 //
 
 #import "WRGLoginViewController.h"
+#import "UIButton+CustomButton.h"
 
-static CGFloat const kSeparatorW = 0.5f;
+static CGFloat const kSeparatorW = 0.8f;
 static CGFloat const kIconMaxWH = 90.f;
 static CGFloat const kIconMinWH = 60.f;
 
@@ -35,8 +36,6 @@ static CGFloat const kIconMinWH = 60.f;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.navigationController.navigationBarHidden = NO;
     
     [self setupLoginView];
     [self addNotificationObserver];
@@ -72,9 +71,9 @@ static CGFloat const kIconMinWH = 60.f;
     
     self.appIconImageView = [[UIImageView alloc] init];
     [self.topContentView addSubview:self.appIconImageView];
-    self.appIconImageView.image = [UIImage imageNamed:@"TestImage"];
+    self.appIconImageView.image = [UIImage imageNamed:@"icon_app"];
     self.appIconImageView.layer.borderColor = COLOR_UI_GRAY.CGColor;
-    self.appIconImageView.layer.borderWidth = 2.f;
+    self.appIconImageView.layer.borderWidth = 1.f;
     self.appIconImageView.layer.cornerRadius = 10.f;
     self.appIconImageView.layer.masksToBounds = YES;
     
@@ -101,7 +100,7 @@ static CGFloat const kIconMinWH = 60.f;
     
     UIImageView *acIconImageView = [[UIImageView alloc] init];
     [inputView addSubview:acIconImageView];
-    acIconImageView.image = [UIImage imageNamed:@"TestImage"];
+    acIconImageView.image = [UIImage imageNamed:@"img_user_name"];
     
     self.accountField = [[UITextField alloc] init];
     [inputView addSubview:self.accountField];
@@ -117,7 +116,7 @@ static CGFloat const kIconMinWH = 60.f;
     
     UIImageView *pwIconImageView = [[UIImageView alloc] init];
     [inputView addSubview:pwIconImageView];
-    pwIconImageView.image = [UIImage imageNamed:@"TestImage"];
+    pwIconImageView.image = [UIImage imageNamed:@"img_password"];
     
     self.passwordField = [[UITextField alloc] init];
     [inputView addSubview:self.passwordField];
@@ -140,7 +139,7 @@ static CGFloat const kIconMinWH = 60.f;
     [loginButton setTitle:@"登录" forState:UIControlStateNormal];
     [loginButton setTitleColor:COLOR_TEXT_WHITE forState:UIControlStateNormal];
     [loginButton addTarget:self action:@selector(loginButtonAction) forControlEvents:UIControlEventTouchUpInside];
-    loginButton.titleLabel.font = [UIFont systemFontOfSize:20.f];
+    loginButton.titleLabel.font = [UIFont systemFontOfSize:18.f];
     loginButton.layer.cornerRadius = 3.f;
     loginButton.layer.masksToBounds = YES;
     loginButton.backgroundColor = COLOR_UI_RED;
@@ -152,7 +151,7 @@ static CGFloat const kIconMinWH = 60.f;
     [self.centerContentView addSubview:registerButton];
     [registerButton setTitle:@"注册网易账号" forState:UIControlStateNormal];
     [registerButton setTitleColor:COLOR_TEXT_GRAY forState:UIControlStateNormal];
-    registerButton.titleLabel.font = [UIFont systemFontOfSize:10.f];
+    registerButton.titleLabel.font = [UIFont systemFontOfSize:11.f];
     
     UIView *rafSeparatorView = [[UIView alloc] init];
     [registerAndForgetPasswordView addSubview:rafSeparatorView];
@@ -162,15 +161,28 @@ static CGFloat const kIconMinWH = 60.f;
     [self.centerContentView addSubview:forgetPasswordButton];
     [forgetPasswordButton setTitle:@"忘记密码" forState:UIControlStateNormal];
     [forgetPasswordButton setTitleColor:COLOR_TEXT_GRAY forState:UIControlStateNormal];
-    forgetPasswordButton.titleLabel.font = [UIFont systemFontOfSize:10.f];
+    forgetPasswordButton.titleLabel.font = [UIFont systemFontOfSize:11.f];
     
     UIView *otherMethodLoginView = [[UIView alloc] init];
     [self.view addSubview:otherMethodLoginView];
-    otherMethodLoginView.backgroundColor = COLOR_RANDOM;
     
     UIView *omlSeparatorView = [[UIView alloc] init];
     [otherMethodLoginView addSubview:omlSeparatorView];
     omlSeparatorView.backgroundColor = COLOR_UI_GRAY;
+    
+    UIButton *wechatButton = [[UIButton alloc] init];
+    [otherMethodLoginView addSubview:wechatButton];
+    [wechatButton setImage:[UIImage imageNamed:@"icon_wechat"] forState:UIControlStateNormal];
+    [wechatButton setTitle:@"微信登录" forState:UIControlStateNormal];
+    [wechatButton setTitleColor:COLOR_TEXT_DEFAULT forState:UIControlStateNormal];
+    wechatButton.titleLabel.font = [UIFont systemFontOfSize:12.f];
+    
+    UIButton *weiboButton = [[UIButton alloc] init];
+    [otherMethodLoginView addSubview:weiboButton];
+    [weiboButton setImage:[UIImage imageNamed:@"icon_weibo"] forState:UIControlStateNormal];
+    [weiboButton setTitle:@"微博登录" forState:UIControlStateNormal];
+    [weiboButton setTitleColor:COLOR_TEXT_DEFAULT forState:UIControlStateNormal];
+    weiboButton.titleLabel.font = [UIFont systemFontOfSize:12.f];
     
     [self.backButton mas_makeConstraints:^(MASConstraintMaker *make) {
         if (@available(iOS 11.0, *)) {
@@ -217,8 +229,9 @@ static CGFloat const kIconMinWH = 60.f;
     }];
     
     [acIconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.equalTo(inputView).inset(15.f);
-        make.width.height.mas_equalTo(20.f);
+        make.top.equalTo(inputView).inset(18.f);
+        make.left.equalTo(inputView).inset(15.f);
+        make.width.height.mas_equalTo(14.f);
     }];
     
     [self.accountField mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -235,9 +248,9 @@ static CGFloat const kIconMinWH = 60.f;
     }];
     
     [pwIconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(acSeparatorView.mas_bottom).offset(15.f);
+        make.top.equalTo(acSeparatorView.mas_bottom).offset(18.f);
         make.left.equalTo(inputView).inset(15.f);
-        make.width.height.mas_equalTo(20.f);
+        make.width.height.mas_equalTo(14.f);
     }];
     
     [self.passwordField mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -260,8 +273,9 @@ static CGFloat const kIconMinWH = 60.f;
     }];
     
     [loginButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.reminderLabel.mas_bottom).offset(kMargin * 1.f);
+        make.top.mas_equalTo(self.reminderLabel.mas_bottom).offset(kMargin);
         make.left.right.equalTo(self.centerContentView).inset(kMargin * 2.f);
+        make.height.mas_equalTo(kMargin * 4.f);
     }];
     
     [registerAndForgetPasswordView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -292,8 +306,8 @@ static CGFloat const kIconMinWH = 60.f;
             make.bottom.equalTo(self.view.mas_bottom).inset(kMargin);
         }
         make.centerX.equalTo(self.view);
-        make.width.mas_equalTo(150.f);
-        make.height.mas_equalTo(50.f);
+        make.width.mas_equalTo(180.f);
+        make.height.mas_equalTo(60.f);
     }];
     
     [omlSeparatorView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -301,36 +315,38 @@ static CGFloat const kIconMinWH = 60.f;
         make.top.bottom.equalTo(otherMethodLoginView).inset(kMargin / 2.f);
         make.width.mas_equalTo(kSeparatorW);
     }];
+    
+    [wechatButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.bottom.equalTo(otherMethodLoginView);
+        make.right.equalTo(omlSeparatorView.mas_left);
+    }];
+    
+    [weiboButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.right.equalTo(otherMethodLoginView);
+        make.left.equalTo(omlSeparatorView.mas_right);
+    }];
+    
+    [wechatButton layoutButtonStyle:ButtonStyleImageTop imageTitleSpace:0.f];
+    [weiboButton layoutButtonStyle:ButtonStyleImageTop imageTitleSpace:0.f];
 }
 
 - (void)loginButtonAction {
     NSString *email = self.accountField.text;
     NSString *password = self.passwordField.text;
     
-    if (![self validateEmail:email]) {
-        self.reminderLabel.text = @"邮箱格式不正确";
-        return;
-    }
+//    if (![self validateEmail:email]) {
+//        self.reminderLabel.text = @"邮箱格式不正确";
+//        return;
+//    }
+//
+//    if (![self validatePassword:password]) {
+//        self.reminderLabel.text = @"密码格式不正确";
+//        return;
+//    }
+//
+//    self.reminderLabel.text = @"";
     
-    if (![self validatePassword:password]) {
-        self.reminderLabel.text = @"密码格式不正确";
-        return;
-    }
-    
-//    [self loginWithEMail:email password:password];
-}
-
-
-- (BOOL)validateEmail:(NSString *)emailString {
-    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
-    NSPredicate *emailPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
-    return [emailPredicate evaluateWithObject:emailString];
-}
-
-- (BOOL)validatePassword:(NSString *)passwordString {
-    NSString *passwordRegex = @"^(?![0-9]+$)(?![a-zA-Z]+$)[a-zA-Z0-9]{6,18}";
-    NSPredicate *passwordPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", passwordRegex];
-    return [passwordPredicate evaluateWithObject:passwordString];
+    [self loginWithEMail:email password:password];
 }
 
 - (void)backButtonAction {
@@ -412,8 +428,8 @@ static CGFloat const kIconMinWH = 60.f;
 }
 
 - (void)loginWithEMail:(NSString *)email password:(NSString *)password {
-    NSURL *url = [NSURL URLWithString:@"http://localhost:3000/users/login.do"];
-    NSString *paramsStr = [NSString stringWithFormat:@"email=%@&password=%@", email, password];
+    NSURL *url = [NSURL URLWithString:@"http://118.24.54.210:3000/users/login.do"];
+    NSString *paramsStr = [NSString stringWithFormat:@"email=%@&password=%@", @"wangruiguo@gmail.com", @"12345678"];
     NSData *paramsData = [paramsStr dataUsingEncoding:NSUTF8StringEncoding];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     request.HTTPMethod = @"POST";
@@ -423,11 +439,29 @@ static CGFloat const kIconMinWH = 60.f;
             NSLog(@"%@", error);
         } else {
             NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-            NSLog(@"%@", dic);
+            if ([[dic valueForKey:@"returnCode"] isEqualToString:@"00"]) {
+                NSString *userName = [dic valueForKey:@"user_name"];
+                [[NSUserDefaults standardUserDefaults] setValue:userName forKey:@"User_Name"];
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"Noti_Login" object:nil];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.navigationController popViewControllerAnimated:YES];
+                });
+            }
         }
     }];
-    
     [task resume];
+}
+
+- (BOOL)validateEmail:(NSString *)emailString {
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *emailPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailPredicate evaluateWithObject:emailString];
+}
+
+- (BOOL)validatePassword:(NSString *)passwordString {
+    NSString *passwordRegex = @"^(?![0-9]+$)(?![a-zA-Z]+$)[a-zA-Z0-9]{6,18}";
+    NSPredicate *passwordPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", passwordRegex];
+    return [passwordPredicate evaluateWithObject:passwordString];
 }
 
 @end

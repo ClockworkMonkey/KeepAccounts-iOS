@@ -54,7 +54,6 @@ static NSString * const kCellId = @"FirstLevelSettingCellReuseID";
     self.tableView.scrollEnabled = NO;
     self.tableView.separatorInset = UIEdgeInsetsMake(0, kMargin, 0, kMargin);
     self.tableView.tableFooterView = [[UIView alloc] init];
-    self.tableView.backgroundColor = COLOR_RANDOM;
     
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self);

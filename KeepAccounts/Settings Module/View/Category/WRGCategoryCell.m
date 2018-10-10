@@ -40,10 +40,9 @@ CGFloat const kImageWH = 35.f;
     
     self.nameLabel = [[UILabel alloc] init];
     [self.contentView addSubview:self.nameLabel];
-    self.nameLabel.text = @"名字名字";
+    self.nameLabel.text = @"名字";
     self.nameLabel.textAlignment = NSTextAlignmentCenter;
     self.nameLabel.font = [UIFont systemFontOfSize:10.f];
-    self.nameLabel.backgroundColor = COLOR_RANDOM;
     
     [self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.contentView.mas_top);

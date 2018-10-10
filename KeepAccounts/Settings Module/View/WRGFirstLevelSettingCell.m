@@ -32,6 +32,7 @@ static CGFloat const kImageWH = 18.f;
     self.imageView.image = [UIImage imageWithSize:CGSizeMake(kImageWH, kImageWH) name:model.imageName];
     self.textLabel.text = model.settingName;
     self.detailTextLabel.text = model.settingDescription;
+    self.detailTextLabel.font = [UIFont systemFontOfSize:13.f];
 }
 
 @end

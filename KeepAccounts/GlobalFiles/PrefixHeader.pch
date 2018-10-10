@@ -10,15 +10,9 @@
 #define PrefixHeader_pch
 
 #import "UILabel+Generic.h"
-
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
-
-//define this constant if you want to use Masonry without the 'mas_' prefix
-#define MAS_SHORTHAND
-//define this constant if you want to enable auto-boxing for default syntax
-#define MAS_SHORTHAND_GLOBALS
-#import <Masonry/Masonry.h>
+#import "NSString+WRGString.h"
+#import "FMDB.h"
+#import "Masonry.h"
 
 /** 颜色 */
 #define RANDOM_256 arc4random_uniform(256)
@@ -48,7 +42,64 @@
 #define COLOR_COMMON_BLACK COLOR_RGB(37, 37, 70)
 #define COLOR_COMMON_RED COLOR_RGB(255, 73, 88)
 
+#define COLOR_CATEGORY_RED COLOR_RGB(255, 73, 88)
+
 #define kMargin 10.f
 #define kTopSafeHeight 38.f
+
+
+// 数据库名称
+#define DATABASE_NAME @"keep_accounts.db"
+// 用户UUID
+#define USER_UUID [[NSUserDefaults standardUserDefaults] valueForKey:@"userUUID"]
+// Document 文件路径
+#define DOCUMENT_PATH NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject
+
+
+
+// 数据库路径
+#define DATABASE_PATH [DOCUMENT_PATH stringByAppendingPathComponent:DATABASE_NAME]
+
+// SQL语句 打开外键约束
+#define SQL_OPEN_FOREIGN_KEYS @"PRAGMA foreign_keys = ON;"
+
+// 交易类型
+#define TRANSACTION_EXPENDITURE @"0"
+#define TRANSACTION_INCOME @"1"
+
+
+
+// SQL语句 创建表 tb_user
+#define SQL_CREAT_TB_USER @"CREATE TABLE IF NOT EXISTS tb_user ( user_uuid CHAR(36) NOT NULL PRIMARY KEY, user_name NVARCHAR(8) NOT NULL, email VARCHAR(16) NOT NULL, password VARCHAR(16) NOT NULL, budget REAL DEFAULT 0);"
+// SQL语句 创建表 tb_category
+#define SQL_CREAT_TB_CATEGORY @"CREATE TABLE IF NOT EXISTS tb_category ( category_uuid CHAR(36) NOT NULL PRIMARY KEY, category_name NVARCHAR(4) NOT NULL, category_index NVARCHAR(4) NOT NULL, category_type CHAR(1) NOT NULL, parent_uuid CHAR(36), transaction_type CHAR(1) NOT NULL, user_uuid CHAR(36) NOT NULL REFERENCES tb_user,  image_name CHAR(36) NOT NULL );"
+// SQL语句 创建表 tb_transaction
+#define SQL_CREAT_TB_TRANSACTION @"CREATE TABLE tb_transaction ( transaction_uuid CHAR(36) NOT NULL PRIMARY KEY, user_uuid CHAR(36) NOT NULL REFERENCES tb_user, category_uuid CHAR(36) NOT NULL REFERENCES tb_category, amount REAL NOT NULL, transaction_time DATETIME NOT NULL DEFAULT (strftime('%Y-%m-%d %H:%M:%f', 'now', 'localtime')), remark NVARCHAR(100) );"
+
+
+
+// SQL语句 表插入数据 tb_user
+#define SQL_INSERT_TB_USER @"INSERT INTO tb_user (user_uuid, user_name, email, password, budget) VALUES (?, ?, ?, ?, ?);"
+// SQL语句 表插入数据 tb_category
+#define SQL_INSERT_TB_CATEGORY @"INSERT INTO tb_category (category_uuid, category_name, category_index, category_type, parent_uuid, transaction_type, user_uuid, image_name) VALUES (?, ?, ?, ?, ?, ?, ?, ?);"
+// SQL语句 表插入数据 tb_transaction
+#define SQL_INSERT_TB_TRANSACTION @"INSERT INTO tb_transaction (transaction_uuid , user_uuid, category_uuid, amount, remark) VALUES ( ?, ?, ?, ?, ?);"
+
+
+
+// SQL语句 查询数据 一级分类
+#define SQL_SELECT_CATEGORY @"SELECT category_uuid, category_name, category_type, transaction_type, image_name, category_index FROM tb_category WHERE parent_uuid ISNULL AND category_type IS '0' AND transaction_type IS (?) ORDER BY category_index;"
+// SQL语句 查询数据 根据一级分类查询二级分类
+#define SQL_SELECT_SUBCATEGORY @"SELECT category_uuid, category_name, category_type, parent_uuid, transaction_type, image_name, category_index FROM tb_category WHERE parent_uuid IS (?) AND category_type IS '1' ORDER BY category_index;"
+
+
+// SQL语句 查询数据 近三天交易详细信息 FROM tb_category、tb_transaction
+#define SQL_SELECT_TRANSACTION_INFO @"SELECT sort_name, parent_uuid, transaction_type, image_name, amount, transaction_time, remark FROM tb_transaction INNER JOIN tb_category sort ON tb_transaction.sort_uuid = sort.sort_uuid WHERE transaction_time BETWEEN strftime('%Y-%m-%d %H:%M:%S.%f', 'now', '-3 day', 'localtime') AND strftime('%Y-%m-%d %H:%M:%S.%f', 'now', 'localtime') ORDER BY transaction_time DESC;"
+// SQL语句 查询数据 根据sort_uuid查询sort_name
+#define SQL_SELECT_SORT_NAME_BY_UUID @"SELECT sort_name FROM tb_category WHERE sort_uuid IS (?);"
+// SQL语句 查询数据 本月交易 支出、收入总额
+#define SQL_SELECT_TRANSACTION_THIS_MONTH @"SELECT sum(amount), transaction_type FROM tb_transaction INNER JOIN tb_category sort ON tb_transaction.sort_uuid = sort.sort_uuid WHERE transaction_time BETWEEN strftime('%Y-%m-%d %H:%M:%f', 'now', 'start of month', '+1 second','localtime') AND strftime('%Y-%m-%d %H:%M:%f', 'now', 'start of month', '+1 month', '-1 second', 'localtime') GROUP BY transaction_type;"
+// SQL语句 查询数据 预算
+#define SQL_SELECT_BUDGET @"SELECT budget FROM tb_user WHERE user_uuid IS (?);"
 
 #endif /* PrefixHeader_pch */

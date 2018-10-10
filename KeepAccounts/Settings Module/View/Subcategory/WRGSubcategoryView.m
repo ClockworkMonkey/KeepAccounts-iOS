@@ -13,7 +13,7 @@
 CGFloat const kPageControlH = 20.f;
 CGFloat const kColloctionViewH = 230.f;
 CGFloat const kViewH = kPageControlH + kColloctionViewH;
-NSInteger const kItemOfAll = 148;   // 总共143个
+NSInteger const kItemOfAll = 147;   // 总共143个
 NSInteger const kItemOfLine = 4;    // 4行
 NSInteger const kItemOfRow = 5;     // 5列
 NSInteger const kItemOfPage = kItemOfRow * kItemOfLine;                              // 每页

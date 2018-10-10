@@ -8,7 +8,7 @@
 
 #import "WRGAddSubcategoryCell.h"
 
-CGFloat const kASCImageWH = 35.f;
+CGFloat const kASCImageWH = 30.f;
 
 @interface WRGAddSubcategoryCell ()
 @property (nonatomic, strong) UIImageView *iconImageView;
@@ -28,19 +28,18 @@ CGFloat const kASCImageWH = 35.f;
 - (void)setupCategoryViewCellWithSize:(CGSize)size {
     self.iconImageView = [[UIImageView alloc] init];
     [self.contentView addSubview:self.iconImageView];
-    self.iconImageView.layer.cornerRadius = kASCImageWH / 2;
-    self.iconImageView.layer.masksToBounds = YES;
-    self.iconImageView.backgroundColor = COLOR_RANDOM;
+    self.iconImageView.backgroundColor = COLOR_BG_WHITE;
     self.iconImageView.layer.cornerRadius = 5.f;
     self.iconImageView.layer.masksToBounds = YES;
-//    self.iconImageView.image = [UIImage imageNamed:@""];
+    self.iconImageView.layer.borderWidth = 0.3f;
+    self.iconImageView.layer.borderColor = COLOR_BG_BLACK.CGColor;
+    self.iconImageView.image = [UIImage imageNamed:@"category_add"];
     
     self.nameLabel = [[UILabel alloc] init];
     [self.contentView addSubview:self.nameLabel];
     self.nameLabel.text = @"添加子类";
     self.nameLabel.textAlignment = NSTextAlignmentCenter;
     self.nameLabel.font = [UIFont systemFontOfSize:10.f];
-    self.nameLabel.backgroundColor = COLOR_RANDOM;
     
     [self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.contentView.mas_top);
